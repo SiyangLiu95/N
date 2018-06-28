@@ -1,0 +1,49 @@
+#ifndef _NIO_CAR_SIGNALS_SENSOR_H
+#define  _NIO_CAR_SIGNALS_SENSOR_H
+
+#include "dbcparser.h"
+
+extern double Signals_reserved_msg_header_51_CAN2;
+extern double Signals_sync_index_51_CAN2;
+extern double Signals_Sensor_Version_51_CAN2;
+extern double Signals_dynamic_camera_height_51_CAN2;
+extern double Signals_VehicleSpeed_51_CAN2;
+extern double Signals_VehicleSpeedValid_51_CAN2;
+extern double Signals_VehicleYaw_51_CAN2;
+extern double Signals_VehicleYawValid_51_CAN2;
+extern double Signals_SteeringWheelAngle_51_CAN2;
+extern double Signals_SteeringWheelAngVal_51_CAN2;
+extern double Signals_AcceleratorPedalValue_51_CAN2;
+extern double Signals_AcceleratorPedalValid_51_CAN2;
+extern double Signals_AccelerDecelerationRate_51_CAN2;
+extern double Signals_BrakePedalPosition_51_CAN2;
+extern double Signals_BrakePosModTravelAch_51_CAN2;
+extern double Signals_BrakePosInitTravelAch_51_CAN2;
+extern double Signals_BrkPosInitTravelAchVald_51_CAN2;
+extern double Signals_Wiper_51_CAN2;
+extern double Signals_ReverseIndicator_51_CAN2;
+extern double Signals_TurnSwitchStatus_51_CAN2;
+extern double Signals_FogLightActivation_51_CAN2;
+extern double Signals_HighBeamStatus_51_CAN2;
+extern double Signals_AmbientLightLevel_51_CAN2;
+extern double Signals_AmbientLightLevelValid_51_CAN2;
+extern double Sens_fcaGapSensitivity_51_CAN2;
+extern double Sens_fcaGapSensitivityValid_51_CAN2;
+extern double Sens_pcwGapSensitivity_51_CAN2;
+extern double Sens_pcwGapSensitivityValid_51_CAN2;
+extern double Sens_gpsCountryCode_FirstChar_51_CAN2;
+extern double Sens_gpsCountryCode_SecondChar_51_CAN2;
+extern double Sens_hbaReducedSensitivity_51_CAN2;
+extern double Sens_hbaReducedSensitivityValid_51_CAN2;
+extern double Sens_ldwSensitivity_51_CAN2;
+extern double Sens_ldwSensitivityValid_51_CAN2;
+extern double signals_padding_resereved_51_CAN2;
+extern double Signals_CRC_sensor_51_CAN2;
+extern uint8 NIO_Car_Signals_Sensors_0x51_51_Buffer_CAN2[20];
+extern uint8 NIO_Car_Signals_Sensors_0x51_51_RxFlag_CAN2;
+extern uint32 NIO_Car_Signals_Sensors_0x51_51_AgeCounter_CAN2;
+extern uint16 NIO_Car_Signals_Sensors_0x51_51_TimeCounter_CAN2;
+
+extern DbcParserMsgTblType TBL_DP_DBCMSGLIST_NIO_Car_Signals_sensor[];
+extern uint16 u16s_dp_MsgTblSize_NIO_Car_Signals_sensor;
+#endif

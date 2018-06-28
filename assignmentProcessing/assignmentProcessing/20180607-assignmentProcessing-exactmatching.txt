@@ -1,0 +1,162 @@
+// assignmentProcessing.cpp : combines assigment sentences between two files
+// NIO Automotives
+// Siyang Liu (6796)
+// 2018-06-06
+
+#include "stdafx.h"
+#include<stdio.h>
+#include<iostream>
+#include<fstream>
+#include<string>
+#include<vector>
+#include<map>
+
+#include<boost/algorithm/string/split.hpp>
+#include<boost/algorithm/string/trim.hpp>
+
+using namespace std;
+using namespace boost;
+
+typedef map <string, string> STR_STR_MAP;
+
+template <typename T>
+void DisplayContents(const T& cont)
+{
+	for (auto element = cont.cbegin(); element != cont.cend(); ++element)
+		cout << element->first << " -> " << element->second << endl;
+	
+	cout << endl;
+}
+
+void reportProgress(int num) {
+	//keep track of progress
+	if (num % 500 == 0) {
+		cout << "processed" << num << "lines" << endl;
+	}
+}
+
+int main()
+{
+	//get Line from raw_data_input
+	fstream from("FromT.txt"); //file reader
+	string curLine = ""; //current line 
+	int lineNum = 0; //line number
+	string left = "";
+	string right = ""; 
+
+	STR_STR_MAP rawDataMap; //assignment pairing
+	STR_STR_MAP::iterator iter; //map iterator
+
+	while (getline(from, curLine))
+	{
+		lineNum++;
+		trim(curLine);
+		//cout << curLine << endl;
+
+		int idx = curLine.find("="); 		//detect "=" sign
+		if (idx != -1) {
+			//cout << idx << endl;
+			//parse line into left and right
+			left = curLine.substr(0, idx);
+			right = curLine.substr(idx + 1, curLine.size() - idx - 2);
+			trim(left);
+			trim(right);
+			//cout << "Left: " << left << " Right: " << right << endl;
+			//store correlation in unordered map; 
+			//left(val to be matched) is key; right(raw data) is value
+			rawDataMap[left] = right;
+		}
+
+		reportProgress(lineNum);
+
+	}
+	from.close();
+
+	//handle edge case
+	rawDataMap["0.0"] = "0.0";
+	cout << "Raw Data map contains " << rawDataMap.size() << " pairs" << endl;
+	//cout << " key-value pairs. They are: " << endl;
+	//DisplayContents(rawDataMap);
+
+
+
+
+	//create output files 
+	ofstream err;
+	err.open("1err.txt", ios::trunc);
+	err.close();
+	ofstream processed;
+	processed.open("2processed.txt", ios::trunc);
+	processed.close();
+
+	//open signal_process_module
+	fstream to("ToT.txt");
+	lineNum = 0;
+	while (getline(to, curLine)) {
+		lineNum++;
+		trim(curLine);
+		//cout << curLine << endl;
+		int idx = curLine.find("="); 		//detect "=" sign
+		if (idx != -1) {                    //if "=" exists: replace
+
+			// handle one line of code spanning two lines in file
+			int checkFullLine = curLine.find(";"); //check line end
+			if (checkFullLine == -1) {  //cannot find ";"
+				string tmp = curLine;
+				getline(to, curLine);
+				trim(curLine);
+				lineNum++;
+				curLine = tmp + curLine;
+			}
+
+			//parse line into left and right
+			left = curLine.substr(0, idx);
+			right = curLine.substr(idx + 1, curLine.size() - idx - 2);
+			trim(left);
+			trim(right);
+			left = left + " = "; 			//now left includes the "=" sign
+			//cout << "Left: " << left << " Right: " << right << endl;
+
+			//handle casting issue
+			string tmp = "";
+			int checkCast = right.find("(");
+			if (checkCast != -1) {  //found "("
+				left = left + right.substr(0, checkCast + 1); //take char "(" from right to left
+				right = right.substr(checkCast + 1, right.size() - checkCast - 1);
+
+				checkCast = right.find(")");
+				tmp = right.substr(0, checkCast);
+				if (tmp.find("=") == -1) { //found casting
+					left = left + tmp + ")";
+					right = right.substr(checkCast + 1, right.size() - checkCast - 1);
+				}
+				else { //bool eval found in parenthesis
+
+				}
+			}
+
+			//find replacement
+			iter = rawDataMap.find(right);
+			if (iter != rawDataMap.end()) { //found key in map
+				curLine = left + iter->second + ";";
+			}
+			else { // cannot find replacement, right is unique
+				
+				err.open("1err.txt", ios::out | ios::app);
+				err << "Error: cannot find replacement  @ line" << lineNum << endl;
+				err.close();
+			}
+		}
+		//write line to new file
+
+		processed.open("2processed.txt", ios::out | ios::app);
+		processed << curLine << endl;
+		processed.close();
+
+		reportProgress(lineNum);
+	}
+	to.close();
+	// use alt+f8 to autocorrect format 
+    return 0;
+}
+

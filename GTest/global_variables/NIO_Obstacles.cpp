@@ -1,0 +1,577 @@
+#include "dbcparser.h"
+
+double Obs_reserved_msg_header_11_CAN2;
+double Obs_sync_index_11_CAN2;
+double Obs_ProtocolVersion_11_CAN2;
+double Obs_NumObstacles_11_CAN2;
+double Obs_Go_11_CAN2;
+double Obs_Close_Car_11_CAN2;
+double Obs_ID_MCP_11_CAN2;
+double Obs_ID_CIPV_11_CAN2;
+double Obs_lost_CIPV_11_CAN2;
+double Obs_CIPVFusionState_11_CAN2;
+double Obs1_ObstacleID_11_CAN2;
+double Obs1_ObstaclePosX_11_CAN2;
+double Obs1_ObstaclePosY_11_CAN2;
+double Obs1_Object_Bottom_11_CAN2;
+double Obs1_Object_Top_11_CAN2;
+double Obs1_Object_Left_11_CAN2;
+double Obs1_Object_Right_11_CAN2;
+double Obs1_BlinkerInfo_11_CAN2;
+double Obs1_Move_in_and_Out_11_CAN2;
+double Obs1_ObstacleVelX_11_CAN2;
+double Obs1_ObstacleType_11_CAN2;
+double Obs1_ObstacleStatus_11_CAN2;
+double Obs1_ObstacleBrakeLights_11_CAN2;
+double Obs1_ObstacleValid_11_CAN2;
+double Obs1_ObstacleLength_11_CAN2;
+double Obs1_ObstacleWidth_11_CAN2;
+double Obs1_ObstacleAge_11_CAN2;
+double Obs1_ObstacleLane_11_CAN2;
+double Obs1_RadarPosX_11_CAN2;
+double Obs1_RadarVelX_11_CAN2;
+double Obs1_RadarMatchConfidence_11_CAN2;
+double Obs1_MatchedRadarID_11_CAN2;
+double Obs1_ObstacleAngleRate_11_CAN2;
+double Obs1_ObstacleVelY_11_CAN2;
+double Obs1_Object_Accel_X_11_CAN2;
+double Obs1_ObstacleReplaced_11_CAN2;
+double Obs1_ObstacleAngle_11_CAN2;
+double Obs2_ObstacleID_11_CAN2;
+double Obs2_ObstaclePosX_11_CAN2;
+double Obs2_ObstaclePosY_11_CAN2;
+double Obs2_Object_Bottom_11_CAN2;
+double Obs2_Object_Top_11_CAN2;
+double Obs2_Object_Left_11_CAN2;
+double Obs2_Object_Right_11_CAN2;
+double Obs2_BlinkerInfo_11_CAN2;
+double Obs2_Move_in_and_Out_11_CAN2;
+double Obs2_ObstacleVelX_11_CAN2;
+double Obs2_ObstacleType_11_CAN2;
+double Obs2_ObstacleStatus_11_CAN2;
+double Obs2_ObstacleBrakeLights_11_CAN2;
+double Obs2_ObstacleValid_11_CAN2;
+double Obs2_ObstacleLength_11_CAN2;
+double Obs2_ObstacleWidth_11_CAN2;
+double Obs2_ObstacleAge_11_CAN2;
+double Obs2_ObstacleLane_11_CAN2;
+double Obs2_RadarPosX_11_CAN2;
+double Obs2_RadarVelX_11_CAN2;
+double Obs2_RadarMatchConfidence_11_CAN2;
+double Obs2_MatchedRadarID_11_CAN2;
+double Obs2_ObstacleAngleRate_11_CAN2;
+double Obs2_ObstacleVelY_11_CAN2;
+double Obs2_Object_Accel_X_11_CAN2;
+double Obs2_ObstacleReplaced_11_CAN2;
+double Obs2_ObstacleAngle_11_CAN2;
+double Obs3_ObstacleID_11_CAN2;
+double Obs3_ObstaclePosX_11_CAN2;
+double Obs3_ObstaclePosY_11_CAN2;
+double Obs3_Object_Bottom_11_CAN2;
+double Obs3_Object_Top_11_CAN2;
+double Obs3_Object_Left_11_CAN2;
+double Obs3_Object_Right_11_CAN2;
+double Obs3_BlinkerInfo_11_CAN2;
+double Obs3_Move_in_and_Out_11_CAN2;
+double Obs3_ObstacleVelX_11_CAN2;
+double Obs3_ObstacleType_11_CAN2;
+double Obs3_ObstacleStatus_11_CAN2;
+double Obs3_ObstacleBrakeLights_11_CAN2;
+double Obs3_ObstacleValid_11_CAN2;
+double Obs3_ObstacleLength_11_CAN2;
+double Obs3_ObstacleWidth_11_CAN2;
+double Obs3_ObstacleAge_11_CAN2;
+double Obs3_ObstacleLane_11_CAN2;
+double Obs3_RadarPosX_11_CAN2;
+double Obs3_RadarVelX_11_CAN2;
+double Obs3_RadarMatchConfidence_11_CAN2;
+double Obs3_MatchedRadarID_11_CAN2;
+double Obs3_ObstacleAngleRate_11_CAN2;
+double Obs3_ObstacleVelY_11_CAN2;
+double Obs3_Object_Accel_X_11_CAN2;
+double Obs3_ObstacleReplaced_11_CAN2;
+double Obs3_ObstacleAngle_11_CAN2;
+double Obs4_ObstacleID_11_CAN2;
+double Obs4_ObstaclePosX_11_CAN2;
+double Obs4_ObstaclePosY_11_CAN2;
+double Obs4_Object_Bottom_11_CAN2;
+double Obs4_Object_Top_11_CAN2;
+double Obs4_Object_Left_11_CAN2;
+double Obs4_Object_Right_11_CAN2;
+double Obs4_BlinkerInfo_11_CAN2;
+double Obs4_Move_in_and_Out_11_CAN2;
+double Obs4_ObstacleVelX_11_CAN2;
+double Obs4_ObstacleType_11_CAN2;
+double Obs4_ObstacleStatus_11_CAN2;
+double Obs4_ObstacleBrakeLights_11_CAN2;
+double Obs4_ObstacleValid_11_CAN2;
+double Obs4_ObstacleLength_11_CAN2;
+double Obs4_ObstacleWidth_11_CAN2;
+double Obs4_ObstacleAge_11_CAN2;
+double Obs4_ObstacleLane_11_CAN2;
+double Obs4_RadarPosX_11_CAN2;
+double Obs4_RadarVelX_11_CAN2;
+double Obs4_RadarMatchConfidence_11_CAN2;
+double Obs4_MatchedRadarID_11_CAN2;
+double Obs4_ObstacleAngleRate_11_CAN2;
+double Obs4_ObstacleVelY_11_CAN2;
+double Obs4_Object_Accel_X_11_CAN2;
+double Obs4_ObstacleReplaced_11_CAN2;
+double Obs4_ObstacleAngle_11_CAN2;
+double Obs5_ObstacleID_11_CAN2;
+double Obs5_ObstaclePosX_11_CAN2;
+double Obs5_ObstaclePosY_11_CAN2;
+double Obs5_Object_Bottom_11_CAN2;
+double Obs5_Object_Top_11_CAN2;
+double Obs5_Object_Left_11_CAN2;
+double Obs5_Object_Right_11_CAN2;
+double Obs5_BlinkerInfo_11_CAN2;
+double Obs5_Move_in_and_Out_11_CAN2;
+double Obs5_ObstacleVelX_11_CAN2;
+double Obs5_ObstacleType_11_CAN2;
+double Obs5_ObstacleStatus_11_CAN2;
+double Obs5_ObstacleBrakeLights_11_CAN2;
+double Obs5_ObstacleValid_11_CAN2;
+double Obs5_ObstacleLength_11_CAN2;
+double Obs5_ObstacleWidth_11_CAN2;
+double Obs5_ObstacleAge_11_CAN2;
+double Obs5_ObstacleLane_11_CAN2;
+double Obs5_RadarPosX_11_CAN2;
+double Obs5_RadarVelX_11_CAN2;
+double Obs5_RadarMatchConfidence_11_CAN2;
+double Obs5_MatchedRadarID_11_CAN2;
+double Obs5_ObstacleAngleRate_11_CAN2;
+double Obs5_ObstacleVelY_11_CAN2;
+double Obs5_Object_Accel_X_11_CAN2;
+double Obs5_ObstacleReplaced_11_CAN2;
+double Obs5_ObstacleAngle_11_CAN2;
+double Obs6_ObstacleID_11_CAN2;
+double Obs6_ObstaclePosX_11_CAN2;
+double Obs6_ObstaclePosY_11_CAN2;
+double Obs6_Object_Bottom_11_CAN2;
+double Obs6_Object_Top_11_CAN2;
+double Obs6_Object_Left_11_CAN2;
+double Obs6_Object_Right_11_CAN2;
+double Obs6_BlinkerInfo_11_CAN2;
+double Obs6_Move_in_and_Out_11_CAN2;
+double Obs6_ObstacleVelX_11_CAN2;
+double Obs6_ObstacleType_11_CAN2;
+double Obs6_ObstacleStatus_11_CAN2;
+double Obs6_ObstacleBrakeLights_11_CAN2;
+double Obs6_ObstacleValid_11_CAN2;
+double Obs6_ObstacleLength_11_CAN2;
+double Obs6_ObstacleWidth_11_CAN2;
+double Obs6_ObstacleAge_11_CAN2;
+double Obs6_ObstacleLane_11_CAN2;
+double Obs6_RadarPosX_11_CAN2;
+double Obs6_RadarVelX_11_CAN2;
+double Obs6_RadarMatchConfidence_11_CAN2;
+double Obs6_MatchedRadarID_11_CAN2;
+double Obs6_ObstacleAngleRate_11_CAN2;
+double Obs6_ObstacleVelY_11_CAN2;
+double Obs6_Object_Accel_X_11_CAN2;
+double Obs6_ObstacleReplaced_11_CAN2;
+double Obs6_ObstacleAngle_11_CAN2;
+double Obs7_ObstacleID_11_CAN2;
+double Obs7_ObstaclePosX_11_CAN2;
+double Obs7_ObstaclePosY_11_CAN2;
+double Obs7_Object_Bottom_11_CAN2;
+double Obs7_Object_Top_11_CAN2;
+double Obs7_Object_Left_11_CAN2;
+double Obs7_Object_Right_11_CAN2;
+double Obs7_BlinkerInfo_11_CAN2;
+double Obs7_Move_in_and_Out_11_CAN2;
+double Obs7_ObstacleVelX_11_CAN2;
+double Obs7_ObstacleType_11_CAN2;
+double Obs7_ObstacleStatus_11_CAN2;
+double Obs7_ObstacleBrakeLights_11_CAN2;
+double Obs7_ObstacleValid_11_CAN2;
+double Obs7_ObstacleLength_11_CAN2;
+double Obs7_ObstacleWidth_11_CAN2;
+double Obs7_ObstacleAge_11_CAN2;
+double Obs7_ObstacleLane_11_CAN2;
+double Obs7_RadarPosX_11_CAN2;
+double Obs7_RadarVelX_11_CAN2;
+double Obs7_RadarMatchConfidence_11_CAN2;
+double Obs7_MatchedRadarID_11_CAN2;
+double Obs7_ObstacleAngleRate_11_CAN2;
+double Obs7_ObstacleVelY_11_CAN2;
+double Obs7_Object_Accel_X_11_CAN2;
+double Obs7_ObstacleReplaced_11_CAN2;
+double Obs7_ObstacleAngle_11_CAN2;
+double Obs8_ObstacleID_11_CAN2;
+double Obs8_ObstaclePosX_11_CAN2;
+double Obs8_ObstaclePosY_11_CAN2;
+double Obs8_Object_Bottom_11_CAN2;
+double Obs8_Object_Top_11_CAN2;
+double Obs8_Object_Left_11_CAN2;
+double Obs8_Object_Right_11_CAN2;
+double Obs8_BlinkerInfo_11_CAN2;
+double Obs8_Move_in_and_Out_11_CAN2;
+double Obs8_ObstacleVelX_11_CAN2;
+double Obs8_ObstacleType_11_CAN2;
+double Obs8_ObstacleStatus_11_CAN2;
+double Obs8_ObstacleBrakeLights_11_CAN2;
+double Obs8_ObstacleValid_11_CAN2;
+double Obs8_ObstacleLength_11_CAN2;
+double Obs8_ObstacleWidth_11_CAN2;
+double Obs8_ObstacleAge_11_CAN2;
+double Obs8_ObstacleLane_11_CAN2;
+double Obs8_RadarPosX_11_CAN2;
+double Obs8_RadarVelX_11_CAN2;
+double Obs8_RadarMatchConfidence_11_CAN2;
+double Obs8_MatchedRadarID_11_CAN2;
+double Obs8_ObstacleAngleRate_11_CAN2;
+double Obs8_ObstacleVelY_11_CAN2;
+double Obs8_Object_Accel_X_11_CAN2;
+double Obs8_ObstacleReplaced_11_CAN2;
+double Obs8_ObstacleAngle_11_CAN2;
+double Obs9_ObstacleID_11_CAN2;
+double Obs9_ObstaclePosX_11_CAN2;
+double Obs9_ObstaclePosY_11_CAN2;
+double Obs9_Object_Bottom_11_CAN2;
+double Obs9_Object_Top_11_CAN2;
+double Obs9_Object_Left_11_CAN2;
+double Obs9_Object_Right_11_CAN2;
+double Obs9_BlinkerInfo_11_CAN2;
+double Obs9_Move_in_and_Out_11_CAN2;
+double Obs9_ObstacleVelX_11_CAN2;
+double Obs9_ObstacleType_11_CAN2;
+double Obs9_ObstacleStatus_11_CAN2;
+double Obs9_ObstacleBrakeLights_11_CAN2;
+double Obs9_ObstacleValid_11_CAN2;
+double Obs9_ObstacleLength_11_CAN2;
+double Obs9_ObstacleWidth_11_CAN2;
+double Obs9_ObstacleAge_11_CAN2;
+double Obs9_ObstacleLane_11_CAN2;
+double Obs9_RadarPosX_11_CAN2;
+double Obs9_RadarVelX_11_CAN2;
+double Obs9_RadarMatchConfidence_11_CAN2;
+double Obs9_MatchedRadarID_11_CAN2;
+double Obs9_ObstacleAngleRate_11_CAN2;
+double Obs9_ObstacleVelY_11_CAN2;
+double Obs9_Object_Accel_X_11_CAN2;
+double Obs9_ObstacleReplaced_11_CAN2;
+double Obs9_ObstacleAngle_11_CAN2;
+double Obs10_ObstacleID_11_CAN2;
+double Obs10_ObstaclePosX_11_CAN2;
+double Obs10_ObstaclePosY_11_CAN2;
+double Obs10_Object_Bottom_11_CAN2;
+double Obs10_Object_Top_11_CAN2;
+double Obs10_Object_Left_11_CAN2;
+double Obs10_Object_Right_11_CAN2;
+double Obs10_BlinkerInfo_11_CAN2;
+double Obs10_Move_in_and_Out_11_CAN2;
+double Obs10_ObstacleVelX_11_CAN2;
+double Obs10_ObstacleType_11_CAN2;
+double Obs10_ObstacleStatus_11_CAN2;
+double Obs10_ObstacleBrakeLights_11_CAN2;
+double Obs10_ObstacleValid_11_CAN2;
+double Obs10_ObstacleLength_11_CAN2;
+double Obs10_ObstacleWidth_11_CAN2;
+double Obs10_ObstacleAge_11_CAN2;
+double Obs10_ObstacleLane_11_CAN2;
+double Obs10_RadarPosX_11_CAN2;
+double Obs10_RadarVelX_11_CAN2;
+double Obs10_RadarMatchConfidence_11_CAN2;
+double Obs10_MatchedRadarID_11_CAN2;
+double Obs10_ObstacleAngleRate_11_CAN2;
+double Obs10_ObstacleVelY_11_CAN2;
+double Obs10_Object_Accel_X_11_CAN2;
+double Obs10_ObstacleReplaced_11_CAN2;
+double Obs10_ObstacleAngle_11_CAN2;
+uint8 NIO_Obstacles_0x11_11_Buffer_CAN2[260];
+uint8 NIO_Obstacles_0x11_11_RxFlag_CAN2;
+uint32 NIO_Obstacles_0x11_11_AgeCounter_CAN2;
+uint16 NIO_Obstacles_0x11_11_TimeCounter_CAN2;
+
+volatile const DbcParserSignalTblType TBL_DP_CAN2_11_SIGNALLIST[] =
+{
+	{(AddrType)&Obs_reserved_msg_header_11_CAN2, DP_SIGNALTYPE_FLOAT, 0, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 0.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs_sync_index_11_CAN2, DP_SIGNALTYPE_FLOAT, 8, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 255.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs_ProtocolVersion_11_CAN2, DP_SIGNALTYPE_FLOAT, 16, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 2.0, 2.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs_NumObstacles_11_CAN2, DP_SIGNALTYPE_FLOAT, 24, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 10.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs_Go_11_CAN2, DP_SIGNALTYPE_FLOAT, 32, 4, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 15.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs_Close_Car_11_CAN2, DP_SIGNALTYPE_FLOAT, 36, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs_ID_MCP_11_CAN2, DP_SIGNALTYPE_FLOAT, 37, 7, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 63.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs_ID_CIPV_11_CAN2, DP_SIGNALTYPE_FLOAT, 44, 7, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 63.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs_lost_CIPV_11_CAN2, DP_SIGNALTYPE_FLOAT, 51, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 3.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs_CIPVFusionState_11_CAN2, DP_SIGNALTYPE_FLOAT, 53, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 3.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_ObstacleID_11_CAN2, DP_SIGNALTYPE_FLOAT, 55, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 63.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_ObstaclePosX_11_CAN2, DP_SIGNALTYPE_FLOAT, 63, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, 0.0, 250.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_ObstaclePosY_11_CAN2, DP_SIGNALTYPE_FLOAT, 75, 10, DP_BYTEORDER_INTEL, 0.0625, 0.0, -32.0, 31.9375, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs1_Object_Bottom_11_CAN2, DP_SIGNALTYPE_FLOAT, 85, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 240.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_Object_Top_11_CAN2, DP_SIGNALTYPE_FLOAT, 93, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 240.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_Object_Left_11_CAN2, DP_SIGNALTYPE_FLOAT, 101, 9, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 320.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_Object_Right_11_CAN2, DP_SIGNALTYPE_FLOAT, 110, 9, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 320.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_BlinkerInfo_11_CAN2, DP_SIGNALTYPE_FLOAT, 119, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 4.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_Move_in_and_Out_11_CAN2, DP_SIGNALTYPE_FLOAT, 122, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 4.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_ObstacleVelX_11_CAN2, DP_SIGNALTYPE_FLOAT, 125, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, -127.93, 127.93, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs1_ObstacleType_11_CAN2, DP_SIGNALTYPE_FLOAT, 137, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 7.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_ObstacleStatus_11_CAN2, DP_SIGNALTYPE_FLOAT, 140, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 7.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_ObstacleBrakeLights_11_CAN2, DP_SIGNALTYPE_FLOAT, 143, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_ObstacleValid_11_CAN2, DP_SIGNALTYPE_FLOAT, 144, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 2.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_ObstacleLength_11_CAN2, DP_SIGNALTYPE_FLOAT, 146, 8, DP_BYTEORDER_INTEL, 0.5, 0.0, 0.0, 31.5, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_ObstacleWidth_11_CAN2, DP_SIGNALTYPE_FLOAT, 154, 8, DP_BYTEORDER_INTEL, 0.05, 0.0, 0.0, 12.5, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_ObstacleAge_11_CAN2, DP_SIGNALTYPE_FLOAT, 162, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 255.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_ObstacleLane_11_CAN2, DP_SIGNALTYPE_FLOAT, 170, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 3.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_RadarPosX_11_CAN2, DP_SIGNALTYPE_FLOAT, 172, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, 0.0, 255.93, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_RadarVelX_11_CAN2, DP_SIGNALTYPE_FLOAT, 184, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, -128.0, 127.9375, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs1_RadarMatchConfidence_11_CAN2, DP_SIGNALTYPE_FLOAT, 196, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 5.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_MatchedRadarID_11_CAN2, DP_SIGNALTYPE_FLOAT, 199, 7, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 127.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_ObstacleAngleRate_11_CAN2, DP_SIGNALTYPE_FLOAT, 206, 16, DP_BYTEORDER_INTEL, 0.01, 0.0, -327.68, 327.67, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs1_ObstacleVelY_11_CAN2, DP_SIGNALTYPE_FLOAT, 222, 8, DP_BYTEORDER_INTEL, 0.1, 0.0, -12.8, 12.7, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs1_Object_Accel_X_11_CAN2, DP_SIGNALTYPE_FLOAT, 230, 10, DP_BYTEORDER_INTEL, 0.03, 0.0, -14.97, 14.97, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs1_ObstacleReplaced_11_CAN2, DP_SIGNALTYPE_FLOAT, 240, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs1_ObstacleAngle_11_CAN2, DP_SIGNALTYPE_FLOAT, 241, 16, DP_BYTEORDER_INTEL, 0.01, 0.0, -327.68, 327.67, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs2_ObstacleID_11_CAN2, DP_SIGNALTYPE_FLOAT, 257, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 63.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs2_ObstaclePosX_11_CAN2, DP_SIGNALTYPE_FLOAT, 265, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, 0.0, 250.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs2_ObstaclePosY_11_CAN2, DP_SIGNALTYPE_FLOAT, 277, 10, DP_BYTEORDER_INTEL, 0.0625, 0.0, -32.0, 31.9375, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs2_Object_Bottom_11_CAN2, DP_SIGNALTYPE_FLOAT, 287, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 240.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs2_Object_Top_11_CAN2, DP_SIGNALTYPE_FLOAT, 295, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 240.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs2_Object_Left_11_CAN2, DP_SIGNALTYPE_FLOAT, 303, 9, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 320.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs2_Object_Right_11_CAN2, DP_SIGNALTYPE_FLOAT, 312, 9, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 320.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs2_BlinkerInfo_11_CAN2, DP_SIGNALTYPE_FLOAT, 321, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 4.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs2_Move_in_and_Out_11_CAN2, DP_SIGNALTYPE_FLOAT, 324, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 4.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs2_ObstacleVelX_11_CAN2, DP_SIGNALTYPE_FLOAT, 327, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, -127.93, 127.93, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs2_ObstacleType_11_CAN2, DP_SIGNALTYPE_FLOAT, 339, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 7.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs2_ObstacleStatus_11_CAN2, DP_SIGNALTYPE_FLOAT, 342, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 7.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs2_ObstacleBrakeLights_11_CAN2, DP_SIGNALTYPE_FLOAT, 345, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs2_ObstacleValid_11_CAN2, DP_SIGNALTYPE_FLOAT, 346, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 2.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs2_ObstacleLength_11_CAN2, DP_SIGNALTYPE_FLOAT, 348, 8, DP_BYTEORDER_INTEL, 0.5, 0.0, 0.0, 31.5, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs2_ObstacleWidth_11_CAN2, DP_SIGNALTYPE_FLOAT, 356, 8, DP_BYTEORDER_INTEL, 0.05, 0.0, 0.0, 12.5, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs2_ObstacleAge_11_CAN2, DP_SIGNALTYPE_FLOAT, 364, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 255.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs2_ObstacleLane_11_CAN2, DP_SIGNALTYPE_FLOAT, 372, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 3.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs2_RadarPosX_11_CAN2, DP_SIGNALTYPE_FLOAT, 374, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, 0.0, 255.93, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs2_RadarVelX_11_CAN2, DP_SIGNALTYPE_FLOAT, 386, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, -128.0, 127.9375, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs2_RadarMatchConfidence_11_CAN2, DP_SIGNALTYPE_FLOAT, 398, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 5.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs2_MatchedRadarID_11_CAN2, DP_SIGNALTYPE_FLOAT, 401, 7, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 127.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs2_ObstacleAngleRate_11_CAN2, DP_SIGNALTYPE_FLOAT, 408, 16, DP_BYTEORDER_INTEL, 0.01, 0.0, -327.68, 327.67, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs2_ObstacleVelY_11_CAN2, DP_SIGNALTYPE_FLOAT, 424, 8, DP_BYTEORDER_INTEL, 0.1, 0.0, -12.8, 12.7, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs2_Object_Accel_X_11_CAN2, DP_SIGNALTYPE_FLOAT, 432, 10, DP_BYTEORDER_INTEL, 0.03, 0.0, -14.97, 14.97, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs2_ObstacleReplaced_11_CAN2, DP_SIGNALTYPE_FLOAT, 442, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs2_ObstacleAngle_11_CAN2, DP_SIGNALTYPE_FLOAT, 443, 16, DP_BYTEORDER_INTEL, 0.01, 0.0, -327.68, 327.67, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs3_ObstacleID_11_CAN2, DP_SIGNALTYPE_FLOAT, 459, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 63.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs3_ObstaclePosX_11_CAN2, DP_SIGNALTYPE_FLOAT, 467, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, 0.0, 250.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs3_ObstaclePosY_11_CAN2, DP_SIGNALTYPE_FLOAT, 479, 10, DP_BYTEORDER_INTEL, 0.0625, 0.0, -32.0, 31.9375, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs3_Object_Bottom_11_CAN2, DP_SIGNALTYPE_FLOAT, 489, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 240.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs3_Object_Top_11_CAN2, DP_SIGNALTYPE_FLOAT, 497, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 240.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs3_Object_Left_11_CAN2, DP_SIGNALTYPE_FLOAT, 505, 9, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 320.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs3_Object_Right_11_CAN2, DP_SIGNALTYPE_FLOAT, 514, 9, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 320.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs3_BlinkerInfo_11_CAN2, DP_SIGNALTYPE_FLOAT, 523, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 4.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs3_Move_in_and_Out_11_CAN2, DP_SIGNALTYPE_FLOAT, 526, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 4.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs3_ObstacleVelX_11_CAN2, DP_SIGNALTYPE_FLOAT, 529, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, -127.93, 127.93, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs3_ObstacleType_11_CAN2, DP_SIGNALTYPE_FLOAT, 541, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 7.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs3_ObstacleStatus_11_CAN2, DP_SIGNALTYPE_FLOAT, 544, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 7.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs3_ObstacleBrakeLights_11_CAN2, DP_SIGNALTYPE_FLOAT, 547, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs3_ObstacleValid_11_CAN2, DP_SIGNALTYPE_FLOAT, 548, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 2.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs3_ObstacleLength_11_CAN2, DP_SIGNALTYPE_FLOAT, 550, 8, DP_BYTEORDER_INTEL, 0.5, 0.0, 0.0, 31.5, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs3_ObstacleWidth_11_CAN2, DP_SIGNALTYPE_FLOAT, 558, 8, DP_BYTEORDER_INTEL, 0.05, 0.0, 0.0, 12.5, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs3_ObstacleAge_11_CAN2, DP_SIGNALTYPE_FLOAT, 566, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 255.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs3_ObstacleLane_11_CAN2, DP_SIGNALTYPE_FLOAT, 574, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 3.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs3_RadarPosX_11_CAN2, DP_SIGNALTYPE_FLOAT, 576, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, 0.0, 255.93, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs3_RadarVelX_11_CAN2, DP_SIGNALTYPE_FLOAT, 588, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, -128.0, 127.9375, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs3_RadarMatchConfidence_11_CAN2, DP_SIGNALTYPE_FLOAT, 600, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 5.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs3_MatchedRadarID_11_CAN2, DP_SIGNALTYPE_FLOAT, 603, 7, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 127.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs3_ObstacleAngleRate_11_CAN2, DP_SIGNALTYPE_FLOAT, 610, 16, DP_BYTEORDER_INTEL, 0.01, 0.0, -327.68, 327.67, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs3_ObstacleVelY_11_CAN2, DP_SIGNALTYPE_FLOAT, 626, 8, DP_BYTEORDER_INTEL, 0.1, 0.0, -12.8, 12.7, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs3_Object_Accel_X_11_CAN2, DP_SIGNALTYPE_FLOAT, 634, 10, DP_BYTEORDER_INTEL, 0.03, 0.0, -14.97, 14.97, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs3_ObstacleReplaced_11_CAN2, DP_SIGNALTYPE_FLOAT, 644, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs3_ObstacleAngle_11_CAN2, DP_SIGNALTYPE_FLOAT, 645, 16, DP_BYTEORDER_INTEL, 0.01, 0.0, -327.68, 327.67, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs4_ObstacleID_11_CAN2, DP_SIGNALTYPE_FLOAT, 661, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 63.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs4_ObstaclePosX_11_CAN2, DP_SIGNALTYPE_FLOAT, 669, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, 0.0, 250.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs4_ObstaclePosY_11_CAN2, DP_SIGNALTYPE_FLOAT, 681, 10, DP_BYTEORDER_INTEL, 0.0625, 0.0, -32.0, 31.9375, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs4_Object_Bottom_11_CAN2, DP_SIGNALTYPE_FLOAT, 691, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 240.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs4_Object_Top_11_CAN2, DP_SIGNALTYPE_FLOAT, 699, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 240.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs4_Object_Left_11_CAN2, DP_SIGNALTYPE_FLOAT, 707, 9, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 320.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs4_Object_Right_11_CAN2, DP_SIGNALTYPE_FLOAT, 716, 9, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 320.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs4_BlinkerInfo_11_CAN2, DP_SIGNALTYPE_FLOAT, 725, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 4.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs4_Move_in_and_Out_11_CAN2, DP_SIGNALTYPE_FLOAT, 728, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 4.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs4_ObstacleVelX_11_CAN2, DP_SIGNALTYPE_FLOAT, 731, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, -127.93, 127.93, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs4_ObstacleType_11_CAN2, DP_SIGNALTYPE_FLOAT, 743, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 7.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs4_ObstacleStatus_11_CAN2, DP_SIGNALTYPE_FLOAT, 746, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 7.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs4_ObstacleBrakeLights_11_CAN2, DP_SIGNALTYPE_FLOAT, 749, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs4_ObstacleValid_11_CAN2, DP_SIGNALTYPE_FLOAT, 750, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 2.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs4_ObstacleLength_11_CAN2, DP_SIGNALTYPE_FLOAT, 752, 8, DP_BYTEORDER_INTEL, 0.5, 0.0, 0.0, 31.5, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs4_ObstacleWidth_11_CAN2, DP_SIGNALTYPE_FLOAT, 760, 8, DP_BYTEORDER_INTEL, 0.05, 0.0, 0.0, 12.5, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs4_ObstacleAge_11_CAN2, DP_SIGNALTYPE_FLOAT, 768, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 255.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs4_ObstacleLane_11_CAN2, DP_SIGNALTYPE_FLOAT, 776, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 3.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs4_RadarPosX_11_CAN2, DP_SIGNALTYPE_FLOAT, 778, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, 0.0, 255.93, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs4_RadarVelX_11_CAN2, DP_SIGNALTYPE_FLOAT, 790, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, -128.0, 127.9375, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs4_RadarMatchConfidence_11_CAN2, DP_SIGNALTYPE_FLOAT, 802, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 5.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs4_MatchedRadarID_11_CAN2, DP_SIGNALTYPE_FLOAT, 805, 7, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 127.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs4_ObstacleAngleRate_11_CAN2, DP_SIGNALTYPE_FLOAT, 812, 16, DP_BYTEORDER_INTEL, 0.01, 0.0, -327.68, 327.67, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs4_ObstacleVelY_11_CAN2, DP_SIGNALTYPE_FLOAT, 828, 8, DP_BYTEORDER_INTEL, 0.1, 0.0, -12.8, 12.7, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs4_Object_Accel_X_11_CAN2, DP_SIGNALTYPE_FLOAT, 836, 10, DP_BYTEORDER_INTEL, 0.03, 0.0, -14.97, 14.97, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs4_ObstacleReplaced_11_CAN2, DP_SIGNALTYPE_FLOAT, 846, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs4_ObstacleAngle_11_CAN2, DP_SIGNALTYPE_FLOAT, 847, 16, DP_BYTEORDER_INTEL, 0.01, 0.0, -327.68, 327.67, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs5_ObstacleID_11_CAN2, DP_SIGNALTYPE_FLOAT, 863, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 63.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs5_ObstaclePosX_11_CAN2, DP_SIGNALTYPE_FLOAT, 871, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, 0.0, 250.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs5_ObstaclePosY_11_CAN2, DP_SIGNALTYPE_FLOAT, 883, 10, DP_BYTEORDER_INTEL, 0.0625, 0.0, -32.0, 31.9375, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs5_Object_Bottom_11_CAN2, DP_SIGNALTYPE_FLOAT, 893, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 240.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs5_Object_Top_11_CAN2, DP_SIGNALTYPE_FLOAT, 901, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 240.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs5_Object_Left_11_CAN2, DP_SIGNALTYPE_FLOAT, 909, 9, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 320.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs5_Object_Right_11_CAN2, DP_SIGNALTYPE_FLOAT, 918, 9, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 320.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs5_BlinkerInfo_11_CAN2, DP_SIGNALTYPE_FLOAT, 927, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 4.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs5_Move_in_and_Out_11_CAN2, DP_SIGNALTYPE_FLOAT, 930, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 4.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs5_ObstacleVelX_11_CAN2, DP_SIGNALTYPE_FLOAT, 933, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, -127.93, 127.93, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs5_ObstacleType_11_CAN2, DP_SIGNALTYPE_FLOAT, 945, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 7.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs5_ObstacleStatus_11_CAN2, DP_SIGNALTYPE_FLOAT, 948, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 7.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs5_ObstacleBrakeLights_11_CAN2, DP_SIGNALTYPE_FLOAT, 951, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs5_ObstacleValid_11_CAN2, DP_SIGNALTYPE_FLOAT, 952, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 2.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs5_ObstacleLength_11_CAN2, DP_SIGNALTYPE_FLOAT, 954, 8, DP_BYTEORDER_INTEL, 0.5, 0.0, 0.0, 31.5, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs5_ObstacleWidth_11_CAN2, DP_SIGNALTYPE_FLOAT, 962, 8, DP_BYTEORDER_INTEL, 0.05, 0.0, 0.0, 12.5, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs5_ObstacleAge_11_CAN2, DP_SIGNALTYPE_FLOAT, 970, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 255.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs5_ObstacleLane_11_CAN2, DP_SIGNALTYPE_FLOAT, 978, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 3.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs5_RadarPosX_11_CAN2, DP_SIGNALTYPE_FLOAT, 980, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, 0.0, 255.93, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs5_RadarVelX_11_CAN2, DP_SIGNALTYPE_FLOAT, 992, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, -128.0, 127.9375, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs5_RadarMatchConfidence_11_CAN2, DP_SIGNALTYPE_FLOAT, 1004, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 5.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs5_MatchedRadarID_11_CAN2, DP_SIGNALTYPE_FLOAT, 1007, 7, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 127.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs5_ObstacleAngleRate_11_CAN2, DP_SIGNALTYPE_FLOAT, 1014, 16, DP_BYTEORDER_INTEL, 0.01, 0.0, -327.68, 327.67, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs5_ObstacleVelY_11_CAN2, DP_SIGNALTYPE_FLOAT, 1030, 8, DP_BYTEORDER_INTEL, 0.1, 0.0, -12.8, 12.7, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs5_Object_Accel_X_11_CAN2, DP_SIGNALTYPE_FLOAT, 1038, 10, DP_BYTEORDER_INTEL, 0.03, 0.0, -14.97, 14.97, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs5_ObstacleReplaced_11_CAN2, DP_SIGNALTYPE_FLOAT, 1048, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs5_ObstacleAngle_11_CAN2, DP_SIGNALTYPE_FLOAT, 1049, 16, DP_BYTEORDER_INTEL, 0.01, 0.0, -327.68, 327.67, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs6_ObstacleID_11_CAN2, DP_SIGNALTYPE_FLOAT, 1065, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 63.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs6_ObstaclePosX_11_CAN2, DP_SIGNALTYPE_FLOAT, 1073, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, 0.0, 250.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs6_ObstaclePosY_11_CAN2, DP_SIGNALTYPE_FLOAT, 1085, 10, DP_BYTEORDER_INTEL, 0.0625, 0.0, -32.0, 31.9375, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs6_Object_Bottom_11_CAN2, DP_SIGNALTYPE_FLOAT, 1095, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 240.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs6_Object_Top_11_CAN2, DP_SIGNALTYPE_FLOAT, 1103, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 240.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs6_Object_Left_11_CAN2, DP_SIGNALTYPE_FLOAT, 1111, 9, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 320.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs6_Object_Right_11_CAN2, DP_SIGNALTYPE_FLOAT, 1120, 9, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 320.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs6_BlinkerInfo_11_CAN2, DP_SIGNALTYPE_FLOAT, 1129, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 4.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs6_Move_in_and_Out_11_CAN2, DP_SIGNALTYPE_FLOAT, 1132, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 4.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs6_ObstacleVelX_11_CAN2, DP_SIGNALTYPE_FLOAT, 1135, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, -127.93, 127.93, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs6_ObstacleType_11_CAN2, DP_SIGNALTYPE_FLOAT, 1147, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 7.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs6_ObstacleStatus_11_CAN2, DP_SIGNALTYPE_FLOAT, 1150, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 7.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs6_ObstacleBrakeLights_11_CAN2, DP_SIGNALTYPE_FLOAT, 1153, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs6_ObstacleValid_11_CAN2, DP_SIGNALTYPE_FLOAT, 1154, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 2.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs6_ObstacleLength_11_CAN2, DP_SIGNALTYPE_FLOAT, 1156, 8, DP_BYTEORDER_INTEL, 0.5, 0.0, 0.0, 31.5, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs6_ObstacleWidth_11_CAN2, DP_SIGNALTYPE_FLOAT, 1164, 8, DP_BYTEORDER_INTEL, 0.05, 0.0, 0.0, 12.5, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs6_ObstacleAge_11_CAN2, DP_SIGNALTYPE_FLOAT, 1172, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 255.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs6_ObstacleLane_11_CAN2, DP_SIGNALTYPE_FLOAT, 1180, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 3.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs6_RadarPosX_11_CAN2, DP_SIGNALTYPE_FLOAT, 1182, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, 0.0, 255.93, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs6_RadarVelX_11_CAN2, DP_SIGNALTYPE_FLOAT, 1194, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, -128.0, 127.9375, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs6_RadarMatchConfidence_11_CAN2, DP_SIGNALTYPE_FLOAT, 1206, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 5.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs6_MatchedRadarID_11_CAN2, DP_SIGNALTYPE_FLOAT, 1209, 7, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 127.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs6_ObstacleAngleRate_11_CAN2, DP_SIGNALTYPE_FLOAT, 1216, 16, DP_BYTEORDER_INTEL, 0.01, 0.0, -327.68, 327.67, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs6_ObstacleVelY_11_CAN2, DP_SIGNALTYPE_FLOAT, 1232, 8, DP_BYTEORDER_INTEL, 0.1, 0.0, -12.8, 12.7, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs6_Object_Accel_X_11_CAN2, DP_SIGNALTYPE_FLOAT, 1240, 10, DP_BYTEORDER_INTEL, 0.03, 0.0, -14.97, 14.97, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs6_ObstacleReplaced_11_CAN2, DP_SIGNALTYPE_FLOAT, 1250, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs6_ObstacleAngle_11_CAN2, DP_SIGNALTYPE_FLOAT, 1251, 16, DP_BYTEORDER_INTEL, 0.01, 0.0, -327.68, 327.67, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs7_ObstacleID_11_CAN2, DP_SIGNALTYPE_FLOAT, 1267, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 63.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs7_ObstaclePosX_11_CAN2, DP_SIGNALTYPE_FLOAT, 1275, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, 0.0, 250.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs7_ObstaclePosY_11_CAN2, DP_SIGNALTYPE_FLOAT, 1287, 10, DP_BYTEORDER_INTEL, 0.0625, 0.0, -32.0, 31.9375, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs7_Object_Bottom_11_CAN2, DP_SIGNALTYPE_FLOAT, 1297, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 240.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs7_Object_Top_11_CAN2, DP_SIGNALTYPE_FLOAT, 1305, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 240.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs7_Object_Left_11_CAN2, DP_SIGNALTYPE_FLOAT, 1313, 9, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 320.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs7_Object_Right_11_CAN2, DP_SIGNALTYPE_FLOAT, 1322, 9, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 320.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs7_BlinkerInfo_11_CAN2, DP_SIGNALTYPE_FLOAT, 1331, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 4.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs7_Move_in_and_Out_11_CAN2, DP_SIGNALTYPE_FLOAT, 1334, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 4.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs7_ObstacleVelX_11_CAN2, DP_SIGNALTYPE_FLOAT, 1337, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, -127.93, 127.93, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs7_ObstacleType_11_CAN2, DP_SIGNALTYPE_FLOAT, 1349, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 7.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs7_ObstacleStatus_11_CAN2, DP_SIGNALTYPE_FLOAT, 1352, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 7.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs7_ObstacleBrakeLights_11_CAN2, DP_SIGNALTYPE_FLOAT, 1355, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs7_ObstacleValid_11_CAN2, DP_SIGNALTYPE_FLOAT, 1356, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 2.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs7_ObstacleLength_11_CAN2, DP_SIGNALTYPE_FLOAT, 1358, 8, DP_BYTEORDER_INTEL, 0.5, 0.0, 0.0, 31.5, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs7_ObstacleWidth_11_CAN2, DP_SIGNALTYPE_FLOAT, 1366, 8, DP_BYTEORDER_INTEL, 0.05, 0.0, 0.0, 12.5, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs7_ObstacleAge_11_CAN2, DP_SIGNALTYPE_FLOAT, 1374, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 255.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs7_ObstacleLane_11_CAN2, DP_SIGNALTYPE_FLOAT, 1382, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 3.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs7_RadarPosX_11_CAN2, DP_SIGNALTYPE_FLOAT, 1384, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, 0.0, 255.93, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs7_RadarVelX_11_CAN2, DP_SIGNALTYPE_FLOAT, 1396, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, -128.0, 127.9375, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs7_RadarMatchConfidence_11_CAN2, DP_SIGNALTYPE_FLOAT, 1408, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 5.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs7_MatchedRadarID_11_CAN2, DP_SIGNALTYPE_FLOAT, 1411, 7, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 127.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs7_ObstacleAngleRate_11_CAN2, DP_SIGNALTYPE_FLOAT, 1418, 16, DP_BYTEORDER_INTEL, 0.01, 0.0, -327.68, 327.67, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs7_ObstacleVelY_11_CAN2, DP_SIGNALTYPE_FLOAT, 1434, 8, DP_BYTEORDER_INTEL, 0.1, 0.0, -12.8, 12.7, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs7_Object_Accel_X_11_CAN2, DP_SIGNALTYPE_FLOAT, 1442, 10, DP_BYTEORDER_INTEL, 0.03, 0.0, -14.97, 14.97, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs7_ObstacleReplaced_11_CAN2, DP_SIGNALTYPE_FLOAT, 1452, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs7_ObstacleAngle_11_CAN2, DP_SIGNALTYPE_FLOAT, 1453, 16, DP_BYTEORDER_INTEL, 0.01, 0.0, -327.68, 327.67, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs8_ObstacleID_11_CAN2, DP_SIGNALTYPE_FLOAT, 1469, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 63.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs8_ObstaclePosX_11_CAN2, DP_SIGNALTYPE_FLOAT, 1477, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, 0.0, 250.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs8_ObstaclePosY_11_CAN2, DP_SIGNALTYPE_FLOAT, 1489, 10, DP_BYTEORDER_INTEL, 0.0625, 0.0, -32.0, 31.9375, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs8_Object_Bottom_11_CAN2, DP_SIGNALTYPE_FLOAT, 1499, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 240.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs8_Object_Top_11_CAN2, DP_SIGNALTYPE_FLOAT, 1507, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 240.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs8_Object_Left_11_CAN2, DP_SIGNALTYPE_FLOAT, 1515, 9, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 320.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs8_Object_Right_11_CAN2, DP_SIGNALTYPE_FLOAT, 1524, 9, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 320.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs8_BlinkerInfo_11_CAN2, DP_SIGNALTYPE_FLOAT, 1533, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 4.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs8_Move_in_and_Out_11_CAN2, DP_SIGNALTYPE_FLOAT, 1536, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 4.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs8_ObstacleVelX_11_CAN2, DP_SIGNALTYPE_FLOAT, 1539, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, -127.93, 127.93, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs8_ObstacleType_11_CAN2, DP_SIGNALTYPE_FLOAT, 1551, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 7.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs8_ObstacleStatus_11_CAN2, DP_SIGNALTYPE_FLOAT, 1554, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 7.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs8_ObstacleBrakeLights_11_CAN2, DP_SIGNALTYPE_FLOAT, 1557, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs8_ObstacleValid_11_CAN2, DP_SIGNALTYPE_FLOAT, 1558, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 2.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs8_ObstacleLength_11_CAN2, DP_SIGNALTYPE_FLOAT, 1560, 8, DP_BYTEORDER_INTEL, 0.5, 0.0, 0.0, 31.5, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs8_ObstacleWidth_11_CAN2, DP_SIGNALTYPE_FLOAT, 1568, 8, DP_BYTEORDER_INTEL, 0.05, 0.0, 0.0, 12.5, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs8_ObstacleAge_11_CAN2, DP_SIGNALTYPE_FLOAT, 1576, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 255.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs8_ObstacleLane_11_CAN2, DP_SIGNALTYPE_FLOAT, 1584, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 3.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs8_RadarPosX_11_CAN2, DP_SIGNALTYPE_FLOAT, 1586, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, 0.0, 255.93, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs8_RadarVelX_11_CAN2, DP_SIGNALTYPE_FLOAT, 1598, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, -128.0, 127.9375, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs8_RadarMatchConfidence_11_CAN2, DP_SIGNALTYPE_FLOAT, 1610, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 5.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs8_MatchedRadarID_11_CAN2, DP_SIGNALTYPE_FLOAT, 1613, 7, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 127.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs8_ObstacleAngleRate_11_CAN2, DP_SIGNALTYPE_FLOAT, 1620, 16, DP_BYTEORDER_INTEL, 0.01, 0.0, -327.68, 327.67, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs8_ObstacleVelY_11_CAN2, DP_SIGNALTYPE_FLOAT, 1636, 8, DP_BYTEORDER_INTEL, 0.1, 0.0, -12.8, 12.7, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs8_Object_Accel_X_11_CAN2, DP_SIGNALTYPE_FLOAT, 1644, 10, DP_BYTEORDER_INTEL, 0.03, 0.0, -14.97, 14.97, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs8_ObstacleReplaced_11_CAN2, DP_SIGNALTYPE_FLOAT, 1654, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs8_ObstacleAngle_11_CAN2, DP_SIGNALTYPE_FLOAT, 1655, 16, DP_BYTEORDER_INTEL, 0.01, 0.0, -327.68, 327.67, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs9_ObstacleID_11_CAN2, DP_SIGNALTYPE_FLOAT, 1671, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 63.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs9_ObstaclePosX_11_CAN2, DP_SIGNALTYPE_FLOAT, 1679, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, 0.0, 250.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs9_ObstaclePosY_11_CAN2, DP_SIGNALTYPE_FLOAT, 1691, 10, DP_BYTEORDER_INTEL, 0.0625, 0.0, -32.0, 31.9375, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs9_Object_Bottom_11_CAN2, DP_SIGNALTYPE_FLOAT, 1701, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 240.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs9_Object_Top_11_CAN2, DP_SIGNALTYPE_FLOAT, 1709, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 240.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs9_Object_Left_11_CAN2, DP_SIGNALTYPE_FLOAT, 1717, 9, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 320.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs9_Object_Right_11_CAN2, DP_SIGNALTYPE_FLOAT, 1726, 9, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 320.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs9_BlinkerInfo_11_CAN2, DP_SIGNALTYPE_FLOAT, 1735, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 4.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs9_Move_in_and_Out_11_CAN2, DP_SIGNALTYPE_FLOAT, 1738, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 4.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs9_ObstacleVelX_11_CAN2, DP_SIGNALTYPE_FLOAT, 1741, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, -127.93, 127.93, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs9_ObstacleType_11_CAN2, DP_SIGNALTYPE_FLOAT, 1753, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 7.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs9_ObstacleStatus_11_CAN2, DP_SIGNALTYPE_FLOAT, 1756, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 7.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs9_ObstacleBrakeLights_11_CAN2, DP_SIGNALTYPE_FLOAT, 1759, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs9_ObstacleValid_11_CAN2, DP_SIGNALTYPE_FLOAT, 1760, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 2.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs9_ObstacleLength_11_CAN2, DP_SIGNALTYPE_FLOAT, 1762, 8, DP_BYTEORDER_INTEL, 0.5, 0.0, 0.0, 31.5, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs9_ObstacleWidth_11_CAN2, DP_SIGNALTYPE_FLOAT, 1770, 8, DP_BYTEORDER_INTEL, 0.05, 0.0, 0.0, 12.5, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs9_ObstacleAge_11_CAN2, DP_SIGNALTYPE_FLOAT, 1778, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 255.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs9_ObstacleLane_11_CAN2, DP_SIGNALTYPE_FLOAT, 1786, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 3.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs9_RadarPosX_11_CAN2, DP_SIGNALTYPE_FLOAT, 1788, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, 0.0, 255.93, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs9_RadarVelX_11_CAN2, DP_SIGNALTYPE_FLOAT, 1800, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, -128.0, 127.9375, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs9_RadarMatchConfidence_11_CAN2, DP_SIGNALTYPE_FLOAT, 1812, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 5.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs9_MatchedRadarID_11_CAN2, DP_SIGNALTYPE_FLOAT, 1815, 7, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 127.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs9_ObstacleAngleRate_11_CAN2, DP_SIGNALTYPE_FLOAT, 1822, 16, DP_BYTEORDER_INTEL, 0.01, 0.0, -327.68, 327.67, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs9_ObstacleVelY_11_CAN2, DP_SIGNALTYPE_FLOAT, 1838, 8, DP_BYTEORDER_INTEL, 0.1, 0.0, -12.8, 12.7, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs9_Object_Accel_X_11_CAN2, DP_SIGNALTYPE_FLOAT, 1846, 10, DP_BYTEORDER_INTEL, 0.03, 0.0, -14.97, 14.97, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs9_ObstacleReplaced_11_CAN2, DP_SIGNALTYPE_FLOAT, 1856, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs9_ObstacleAngle_11_CAN2, DP_SIGNALTYPE_FLOAT, 1857, 16, DP_BYTEORDER_INTEL, 0.01, 0.0, -327.68, 327.67, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs10_ObstacleID_11_CAN2, DP_SIGNALTYPE_FLOAT, 1873, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 63.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs10_ObstaclePosX_11_CAN2, DP_SIGNALTYPE_FLOAT, 1881, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, 0.0, 250.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs10_ObstaclePosY_11_CAN2, DP_SIGNALTYPE_FLOAT, 1893, 10, DP_BYTEORDER_INTEL, 0.0625, 0.0, -32.0, 31.9375, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs10_Object_Bottom_11_CAN2, DP_SIGNALTYPE_FLOAT, 1903, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 240.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs10_Object_Top_11_CAN2, DP_SIGNALTYPE_FLOAT, 1911, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 240.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs10_Object_Left_11_CAN2, DP_SIGNALTYPE_FLOAT, 1919, 9, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 320.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs10_Object_Right_11_CAN2, DP_SIGNALTYPE_FLOAT, 1928, 9, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 320.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs10_BlinkerInfo_11_CAN2, DP_SIGNALTYPE_FLOAT, 1937, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 4.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs10_Move_in_and_Out_11_CAN2, DP_SIGNALTYPE_FLOAT, 1940, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 4.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs10_ObstacleVelX_11_CAN2, DP_SIGNALTYPE_FLOAT, 1943, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, -127.93, 127.93, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs10_ObstacleType_11_CAN2, DP_SIGNALTYPE_FLOAT, 1955, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 7.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs10_ObstacleStatus_11_CAN2, DP_SIGNALTYPE_FLOAT, 1958, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 7.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs10_ObstacleBrakeLights_11_CAN2, DP_SIGNALTYPE_FLOAT, 1961, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs10_ObstacleValid_11_CAN2, DP_SIGNALTYPE_FLOAT, 1962, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 2.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs10_ObstacleLength_11_CAN2, DP_SIGNALTYPE_FLOAT, 1964, 8, DP_BYTEORDER_INTEL, 0.5, 0.0, 0.0, 31.5, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs10_ObstacleWidth_11_CAN2, DP_SIGNALTYPE_FLOAT, 1972, 8, DP_BYTEORDER_INTEL, 0.05, 0.0, 0.0, 12.5, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs10_ObstacleAge_11_CAN2, DP_SIGNALTYPE_FLOAT, 1980, 8, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 255.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs10_ObstacleLane_11_CAN2, DP_SIGNALTYPE_FLOAT, 1988, 2, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 3.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs10_RadarPosX_11_CAN2, DP_SIGNALTYPE_FLOAT, 1990, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, 0.0, 255.93, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs10_RadarVelX_11_CAN2, DP_SIGNALTYPE_FLOAT, 2002, 12, DP_BYTEORDER_INTEL, 0.0625, 0.0, -128.0, 127.9375, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs10_RadarMatchConfidence_11_CAN2, DP_SIGNALTYPE_FLOAT, 2014, 3, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 5.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs10_MatchedRadarID_11_CAN2, DP_SIGNALTYPE_FLOAT, 2017, 7, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 127.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs10_ObstacleAngleRate_11_CAN2, DP_SIGNALTYPE_FLOAT, 2024, 16, DP_BYTEORDER_INTEL, 0.01, 0.0, -327.68, 327.67, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs10_ObstacleVelY_11_CAN2, DP_SIGNALTYPE_FLOAT, 2040, 8, DP_BYTEORDER_INTEL, 0.1, 0.0, -12.8, 12.7, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs10_Object_Accel_X_11_CAN2, DP_SIGNALTYPE_FLOAT, 2048, 10, DP_BYTEORDER_INTEL, 0.03, 0.0, -14.97, 14.97, DP_SIGNTYPE_SIGNED},
+	{(AddrType)&Obs10_ObstacleReplaced_11_CAN2, DP_SIGNALTYPE_FLOAT, 2058, 1, DP_BYTEORDER_INTEL, 1.0, 0.0, 0.0, 1.0, DP_SIGNTYPE_UNSIGNED},
+	{(AddrType)&Obs10_ObstacleAngle_11_CAN2, DP_SIGNALTYPE_FLOAT, 2059, 16, DP_BYTEORDER_INTEL, 0.01, 0.0, -327.68, 327.67, DP_SIGNTYPE_SIGNED},
+};
+volatile const uint16 u8s_dp_CAN2_11_SignalTblSize = (uint16)(sizeof(TBL_DP_CAN2_11_SIGNALLIST) / sizeof(DbcParserSignalTblType));
+
+DbcParserMsgTblType TBL_DP_DBCMSGLIST_NIO_Obstacles[] =
+{
+	{0x11, DP_MSGDIR_RX, DP_PERIODICMACRO, 0, (AddrType)TBL_DP_CAN2_11_SIGNALLIST, u8s_dp_CAN2_11_SignalTblSize, 2, NIO_Obstacles_0x11_11_Buffer_CAN2, &NIO_Obstacles_0x11_11_RxFlag_CAN2, &NIO_Obstacles_0x11_11_AgeCounter_CAN2, &NIO_Obstacles_0x11_11_TimeCounter_CAN2, 260, DP_MSGKIND_NORMAL},
+};
+uint16 u16s_dp_MsgTblSize_NIO_Obstacles = (uint16)(sizeof(TBL_DP_DBCMSGLIST_NIO_Obstacles) / sizeof(DbcParserMsgTblType ));

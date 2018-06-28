@@ -1,0 +1,16 @@
+void
+
+bla
+
+blabla
+	a=t1;
+b=t2;
+	c=
+		t3;
+b=(cast)t2;
+b=(t2 != 0);
+b=(t1 != 0) 
+	+ (t2 != 0) + (t3 != 0);
+	err=t;
+
+biu

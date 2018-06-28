@@ -1,0 +1,38 @@
+函数名为cal2bin
+支持-i 选项，指定输入文件格式为s19，如不为s19，则报错
+支持-o 选项，指定输出文件格式为bin，如不为bin，则报错；如不指定-o，则默认输出文件为当前文件夹下CAL.bin
+支持-h/--help选项，输出版本信息和上述使用信息
+
+最后调用的形式：python cal2bin -i ASIMOV_FEATRE_CAL.s19 -o CAL.bin
+         以下是代码逻辑部分，
+             cal_s19_file = 'ASIMOV_FEATURE_CAL.s19'
+        cal_bin_file = 'asimov_app_cal.bin'
+        cal_name = 'CAL.bin'
+        app_config_path = '/nio/feature'
+
+        # bin file format
+        # Byte 0..3 cal length
+        # Byte 4..7 cal crc32
+        # cal contents
+
+        # read s19 cal file and get length crc32
+        s19_fd = bincopy.BinFile()
+        s19_fd.add_srec_file(cal_s19_file)
+        cal_length = len(s19_fd.as_binary())
+        cal_crc32 = zlib.crc32((s19_fd.as_binary())) % (1<<32)
+        print('CAL length is 0x{0:x}, CRC32 is 0x{1:x}'.format(cal_length, cal_crc32))
+
+        #pack cal to bin_file
+        with open(cal_bin_file, 'wb') as bin_fd:
+            bin_fd.write(struct.pack('<I', cal_length))
+            bin_fd.write(struct.pack('<I', cal_crc32))
+            bin_fd.write(s19_fd.as_binary())
+
+         有问题随时联系。
+
+
+         Python还有些问题，今天改完发给我吧。
+1.	Struct没有import OK
+2.	不指定-o的话，默认生成的不是CAL.bin
+3.	再加一个功能吧，不给定参数的情况下，也输出help信息。 OK
+
