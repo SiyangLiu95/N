@@ -8,7 +8,7 @@
 #ifndef DBCPARSER_H_
 #define DBCPARSER_H_
 
-// #include "can_type.h"
+#include "can_type.h"
 
 #ifndef uint8
 typedef signed char         sint8;          /*        -128 .. +127            */
