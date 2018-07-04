@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <BoostVersionInLibname>1_67</BoostVersionInLibname>
+    <BoostVersionInPath>$(BoostVersionInLibname)_0</BoostVersionInPath>
+    <BoostDir>D:\Boost\boost_$(BoostVersionInPath)</BoostDir>
+    <BoostLibDir>$(BoostDir)\stage\lib</BoostLibDir>
+    <IbeoSDKDir>D:\Scala\IbeoSDK5.2.2</IbeoSDKDir>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_PropertySheetDisplayName>BoostX64SettingsPropertySheet</_PropertySheetDisplayName>
+  </PropertyGroup>
+  <ItemGroup>
+    <BuildMacro Include="BoostVersionInLibname">
+      <Value>$(BoostVersionInLibname)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="BoostVersionInPath">
+      <Value>$(BoostVersionInPath)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="BoostDir">
+      <Value>$(BoostDir)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="BoostLibDir">
+      <Value>$(BoostLibDir)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="IbeoSDKDir">
+      <Value>$(IbeoSDKDir)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
