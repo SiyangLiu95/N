@@ -1,22 +1,22 @@
 SIN_out.Sens_out.IMU_in.IMU_Acc.IMU_aVehLatAcc,LatA_3D_CAN0
 SIN_out.Sens_out.IMU_in.IMU_Acc.IMU_aVehLongAcc,LgtA_3E_CAN0
 SIN_out.Sens_out.IMU_in.IMU_AngularRate.IMU_dphiYawRate,YawRate_3D_CAN0
-SIN_out.Sens_out.USS_in.USS_Front.USS_lDstFR,(unsigned char)FrntLeMidRegnDst_28A_CAN4
-SIN_out.Sens_out.USS_in.USS_Front.USS_lDstFL,(unsigned char)FrntRiMidRegnDst_28A_CAN4
-SIN_out.Sens_out.USS_in.USS_Front.USS_lDstFLM,(unsigned char)FrntMidRegnDst_28A_CAN4
-SIN_out.Sens_out.USS_in.USS_Front.USS_lDstFRM,(unsigned char)FrntMidRegnDst_28A_CAN4
-SIN_out.Sens_out.USS_in.USS_Front.USS_lDstFRS,(unsigned char)FrntRiRegnDst_28A_CAN4
-SIN_out.Sens_out.USS_in.USS_Front.USS_lDstFLS,(unsigned char)FrntLeRegnDst_28A_CAN4
-SIN_out.Sens_out.USS_in.USS_Front.USS_stFrntSnsrFaultSt,(unsigned char)FrntSnsrFltSt_28A_CAN4
-SIN_out.Sens_out.USS_in.USS_Front.USS_stFrntSysSts,(unsigned char)FrntSysSts_28A_CAN4
-SIN_out.Sens_out.USS_in.USS_Rear.USS_lDstRR,(unsigned char)ReRiMidRegnDst_28B_CAN4
-SIN_out.Sens_out.USS_in.USS_Rear.USS_lDstRL,(unsigned char)ReLeMidRegnDst_28B_CAN4
-SIN_out.Sens_out.USS_in.USS_Rear.USS_lDstRLM,(unsigned char)ReMidRegnDst_28B_CAN4
-SIN_out.Sens_out.USS_in.USS_Rear.USS_lDstRRM,(unsigned char)ReMidRegnDst_28B_CAN4
-SIN_out.Sens_out.USS_in.USS_Rear.USS_lDstRLS,(unsigned char)ReLeRegnDst_28B_CAN4
-SIN_out.Sens_out.USS_in.USS_Rear.USS_lDstRRS,(unsigned char)ReRiRegnDst_28B_CAN4
-SIN_out.Sens_out.USS_in.USS_Rear.USS_stRearSnsrFaultSts,(unsigned char)ReSnsrFltSt_28B_CAN4
-SIN_out.Sens_out.USS_in.USS_Rear.USS_stRearSysSts,(unsigned char)ReSysSts_28B_CAN4
+SIN_out.Sens_out.USS_in.USS_Front.USS_lDstFR, FrntLeMidRegnDst_28A_CAN4 
+SIN_out.Sens_out.USS_in.USS_Front.USS_lDstFL, FrntRiMidRegnDst_28A_CAN4 
+SIN_out.Sens_out.USS_in.USS_Front.USS_lDstFLM, FrntMidRegnDst_28A_CAN4 
+SIN_out.Sens_out.USS_in.USS_Front.USS_lDstFRM, FrntMidRegnDst_28A_CAN4 
+SIN_out.Sens_out.USS_in.USS_Front.USS_lDstFRS, FrntRiRegnDst_28A_CAN4 
+SIN_out.Sens_out.USS_in.USS_Front.USS_lDstFLS, FrntLeRegnDst_28A_CAN4 
+SIN_out.Sens_out.USS_in.USS_Front.USS_stFrntSnsrFaultSt, FrntSnsrFltSt_28A_CAN4 
+SIN_out.Sens_out.USS_in.USS_Front.USS_stFrntSysSts, FrntSysSts_28A_CAN4 
+SIN_out.Sens_out.USS_in.USS_Rear.USS_lDstRR, ReRiMidRegnDst_28B_CAN4 
+SIN_out.Sens_out.USS_in.USS_Rear.USS_lDstRL, ReLeMidRegnDst_28B_CAN4 
+SIN_out.Sens_out.USS_in.USS_Rear.USS_lDstRLM, ReMidRegnDst_28B_CAN4 
+SIN_out.Sens_out.USS_in.USS_Rear.USS_lDstRRM, ReMidRegnDst_28B_CAN4 
+SIN_out.Sens_out.USS_in.USS_Rear.USS_lDstRLS, ReLeRegnDst_28B_CAN4 
+SIN_out.Sens_out.USS_in.USS_Rear.USS_lDstRRS, ReRiRegnDst_28B_CAN4 
+SIN_out.Sens_out.USS_in.USS_Rear.USS_stRearSnsrFaultSts, ReSnsrFltSt_28B_CAN4 
+SIN_out.Sens_out.USS_in.USS_Rear.USS_stRearSysSts, ReSysSts_28B_CAN4 
 SIN_out.Sens_out.USS_in.USS_ObjHght[0],MapObj00Hei_15C_CAN4
 SIN_out.Sens_out.USS_in.USS_ObjHght[1],MapObj10Hei_15C_CAN4
 SIN_out.Sens_out.USS_in.USS_ObjHght[2],MapObj01Hei_15D_CAN4
@@ -177,18 +177,18 @@ SIN_out.Sens_out.USS_in.USS_ObjTyp[16],MapObj08Typ_164_CAN4
 SIN_out.Sens_out.USS_in.USS_ObjTyp[17],MapObj18Typ_164_CAN4
 SIN_out.Sens_out.USS_in.USS_ObjTyp[18],MapObj09Typ_165_CAN4
 SIN_out.Sens_out.USS_in.USS_ObjTyp[19],MapObj19Typ_165_CAN4
-SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stAbortReason,(unsigned char)ApaAbortReason_1A6_CAN4
-SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stInstruction,(unsigned char)ApaInstruction_1A6_CAN4
-SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stPocSlotParallelLe,(unsigned char)ApaPocSlotParallelLe_1A6_CAN4
-SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stPocSlotParallelRi,(unsigned char)ApaPocSlotParallelRi_1A6_CAN4
-SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stPscSlotCrossLe,(unsigned char)ApaPscSlotCrossLe_1A6_CAN4
-SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stPscSlotCrossRi,(unsigned char)ApaPscSlotCrossRi_1A6_CAN4
-SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stPscSlotParallelLe,(unsigned char)ApaPscSlotParallelLe_1A6_CAN4
-SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stPscSlotParallelRi,(unsigned char)ApaPscSlotParallelRi_1A6_CAN4
-SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stApaStatus,(unsigned char)ApaStatus_1A6_CAN4
-SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stUpaSysDisabled,(unsigned char)UpaSysDi_1A6_CAN4
-SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stUpaSysSrv,(unsigned char)UpaSysSrv_1A6_CAN4
-SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stUpaSysSts,(unsigned char)UpaSysSts_1A6_CAN4
+SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stAbortReason, ApaAbortReason_1A6_CAN4 
+SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stInstruction, ApaInstruction_1A6_CAN4 
+SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stPocSlotParallelLe, ApaPocSlotParallelLe_1A6_CAN4 
+SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stPocSlotParallelRi, ApaPocSlotParallelRi_1A6_CAN4 
+SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stPscSlotCrossLe, ApaPscSlotCrossLe_1A6_CAN4 
+SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stPscSlotCrossRi, ApaPscSlotCrossRi_1A6_CAN4 
+SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stPscSlotParallelLe, ApaPscSlotParallelLe_1A6_CAN4 
+SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stPscSlotParallelRi, ApaPscSlotParallelRi_1A6_CAN4 
+SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stApaStatus, ApaStatus_1A6_CAN4 
+SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stUpaSysDisabled, UpaSysDi_1A6_CAN4 
+SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stUpaSysSrv, UpaSysSrv_1A6_CAN4 
+SIN_out.Sens_out.USS_in.USS_PrkngSlotSts.USS_stUpaSysSts, UpaSysSts_1A6_CAN4 
 SIN_out.Sens_out.USS_in.USS_EnvPrkngSlotInfo.USS_EnvPrkngSlotInfo[0],ApaPocSlotParallelLeObj1Alpha_286_CAN4
 SIN_out.Sens_out.USS_in.USS_EnvPrkngSlotInfo.USS_EnvPrkngSlotInfo[1],ApaPocSlotParallelLeObj1X_286_CAN4
 SIN_out.Sens_out.USS_in.USS_EnvPrkngSlotInfo.USS_EnvPrkngSlotInfo[2],ApaPocSlotParallelLeObj1Y_286_CAN4
@@ -231,7 +231,7 @@ SIN_out.Sens_out.USS_in.USS_EnvPrkngSlotInfo.USS_EnvPrkngSlotInfo[38],ApaXSlotYO
 SIN_out.Sens_out.USS_in.USS_EnvPrkngSlotInfo.USS_EnvPrkngSlotInfo[39],ApaXSlotYObj2Alpha_286_CAN4
 SIN_out.Sens_out.USS_in.USS_EnvPrkngSlotInfo.USS_EnvPrkngSlotInfo[40],ApaXSlotYObj2X_286_CAN4
 SIN_out.Sens_out.USS_in.USS_EnvPrkngSlotInfo.USS_EnvPrkngSlotInfo[41],ApaXSlotYObj2Y_286_CAN4
-SIN_out.Sens_out.USS_in.USS_EnvPrkngSlotInfo.USS_stPscEnvSlotTyp,(unsigned char)ApaPscEnvSlotTyp_286_CAN4
+SIN_out.Sens_out.USS_in.USS_EnvPrkngSlotInfo.USS_stPscEnvSlotTyp, ApaPscEnvSlotTyp_286_CAN4 
 SIN_out.Sens_out.USS_in.USS_VehPrkngSlotInfo.USS_VehPrkngSlotInfo[0],ApaPscSlotParallelLeSizeX_288_CAN4
 SIN_out.Sens_out.USS_in.USS_VehPrkngSlotInfo.USS_VehPrkngSlotInfo[1],ApaPscSlotParallelLeSizeY_288_CAN4
 SIN_out.Sens_out.USS_in.USS_VehPrkngSlotInfo.USS_VehPrkngSlotInfo[2],ApaPscSlotParallelLeVehPsi_288_CAN4
@@ -267,9 +267,9 @@ SIN_out.Sens_out.USS_in.USS_VehPrkngSlotInfo.USS_VehPrkngSlotInfo[31],ApaXSlotYS
 SIN_out.Sens_out.USS_in.USS_VehPrkngSlotInfo.USS_VehPrkngSlotInfo[32],ApaXSlotYVehPsi_288_CAN4
 SIN_out.Sens_out.USS_in.USS_VehPrkngSlotInfo.USS_VehPrkngSlotInfo[33],ApaXSlotYVehX_288_CAN4
 SIN_out.Sens_out.USS_in.USS_VehPrkngSlotInfo.USS_VehPrkngSlotInfo[34],ApaXSlotYVehY_288_CAN4
-SIN_out.Sens_out.USS_in.USS_VehPrkngSlotInfo.USS_stPscVehSlotTyp,(unsigned char)ApaPscVehSlotTyp_288_CAN4
-SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_stLeftLaneQl,(unsigned char)Quality_766_CAN2
-SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_stLeftLaneTyp,(unsigned char)Lane_Type_766_CAN2
+SIN_out.Sens_out.USS_in.USS_VehPrkngSlotInfo.USS_stPscVehSlotTyp, ApaPscVehSlotTyp_288_CAN4 
+SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_stLeftLaneQl, Quality_766_CAN2 
+SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_stLeftLaneTyp, Lane_Type_766_CAN2 
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_tLeftLaneTLC,TLC_767_CAN2
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_lLeftMarkWdth,Width_marking_766_CAN2
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_lLeftLanePos,Lane_Model_C0_766_CAN2
@@ -278,9 +278,10 @@ SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_xLeftLaneCur,Lane_Model_C2_766_CAN2
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_xLeftLanedCur,Lane_Model_C3_766_CAN2
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_lLeftLaneStrt,View_Range_Start_767_CAN2
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_lLeftLaneEnd,View_Range_End_767_CAN2
-SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_flgLeftLaneCrsg,(Lane_Crossing_767_CAN2 !=  0.0)
-SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_stRightLaneQl,(unsigned char)Quality_768_CAN2
-SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_stRightLaneTyp,(unsigned char)Lane_Type_768_CAN2
+Following pair produces a bool
+SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_flgLeftLaneCrsg, Lane_Crossing_767_CAN2 
+SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_stRightLaneQl, Quality_768_CAN2 
+SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_stRightLaneTyp, Lane_Type_768_CAN2 
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_tRightLaneTLC,TLC_769_CAN2
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_lRightMarkWdth,Width_marking_768_CAN2
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_lRightLanePos,Lane_Model_C0_768_CAN2
@@ -289,9 +290,10 @@ SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_xRightLaneCur,Lane_Model_C2_768_CAN2
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_xRightLanedCur,Lane_Model_C3_768_CAN2
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_lRightLaneStrt,View_Range_Start_769_CAN2
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_lRightLaneEnd,View_Range_End_769_CAN2
-SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_flgRightLaneCrsg,(Lane_Crossing_769_CAN2 != 0.0)
-SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_stNxtLeftLaneQl,(unsigned char)Quality_76C_CAN2
-SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_stNxtLeftLaneTyp,(unsigned char)Lane_Type_76C_CAN2
+Following pair produces a bool
+SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_flgRightLaneCrsg, Lane_Crossing_769_CAN2 
+SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_stNxtLeftLaneQl, Quality_76C_CAN2 
+SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_stNxtLeftLaneTyp, Lane_Type_76C_CAN2 
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_lNxtLeftMarkWdth,Width_marking_76C_CAN2
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_lNxtLeftLanePos,Lane_Model_C0_76C_CAN2
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_phiNxtLeftLaneHdgAg,Lane_Model_C1_76D_CAN2
@@ -299,8 +301,8 @@ SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_xNxtLeftLaneCur,Lane_Model_C2_76C_CA
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_xNxtLeftLanedCur,Lane_Model_C3_76C_CAN2
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_lNxtLeftLaneStrt,View_Range_Start_76D_CAN2
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_lNxtLeftLaneEnd,View_Range_End_76D_CAN2
-SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_stNxtRightLaneQl,(unsigned char)Quality_76E_CAN2
-SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_stNxtRightLaneTyp,(unsigned char)Lane_Type_76E_CAN2
+SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_stNxtRightLaneQl, Quality_76E_CAN2 
+SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_stNxtRightLaneTyp, Lane_Type_76E_CAN2 
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_lNxtRightMarkWdth,Width_marking_76E_CAN2
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_lNxtRightLanePos,Lane_Model_C0_76E_CAN2
 SIN_out.Sens_out.CAMC_in.CAMC_LaneInfo.CAMC_phiNxtRightLaneHdgAg,Lane_Model_C1_76F_CAN2
@@ -393,8 +395,8 @@ SIN_out.Sens_out.CAMC_in.CAMC_AHC.CAMC_HighLowBeam.CAMC_xReserved1,reserved_1_60
 SIN_out.Sens_out.CAMC_in.CAMC_AHC.CAMC_HighLowBeam.CAMC_stReasonForHLBInactv,Reason_for_HLB_Inactive_600_CAN2
 SIN_out.Sens_out.CAMC_in.CAMC_AHC.CAMC_HighLowBeam.CAMC_flgReasonPreceding,Reason_Preceding_600_CAN2
 SIN_out.Sens_out.CAMC_in.CAMC_AHC.CAMC_HighLowBeam.CAMC_xReserved4,reserved_4_600_CAN2
-SIN_out.Sens_out.CAMC_in.CAMC_AHC.CAMC_HighLowBeam.CAMC_stHLBRunningMode,(unsigned char)HLB_Running_Mode_600_CAN2
-SIN_out.Sens_out.CAMC_in.CAMC_AHC.CAMC_HighLowBeam.CAMC_flgDecision,(unsigned char)HLB_decision_600_CAN2
+SIN_out.Sens_out.CAMC_in.CAMC_AHC.CAMC_HighLowBeam.CAMC_stHLBRunningMode, HLB_Running_Mode_600_CAN2 
+SIN_out.Sens_out.CAMC_in.CAMC_AHC.CAMC_HighLowBeam.CAMC_flgDecision, HLB_decision_600_CAN2 
 SIN_out.Sens_out.CAMC_in.CAMC_AHC.CAMC_HighLowBeam.CAMC_flgReasonSharpCurve,Reason_Sharp_Curve_600_CAN2
 SIN_out.Sens_out.CAMC_in.CAMC_AHC.CAMC_HighLowBeam.CAMC_flgReasonPrecedingGrace,Reason_Preceding_Grace_600_CAN2
 SIN_out.Sens_out.CAMC_in.CAMC_AHC.CAMC_HighLowBeam.CAMC_flgReasonOncomingGrace,Reason_Oncoming_Grace_600_CAN2
@@ -1127,70 +1129,134 @@ SIN_out.Sens_out.DphRADFC_in.RADFC_TrackStatus[63],CAN_TX_TRACK_STATUS_53F_CAN1
 SIN_out.Sens_out.DphRADFC_in.RADFC_TrackStatus[7],CAN_TX_TRACK_STATUS_507_CAN1
 SIN_out.Sens_out.DphRADFC_in.RADFC_TrackStatus[8],CAN_TX_TRACK_STATUS_508_CAN1
 SIN_out.Sens_out.DphRADFC_in.RADFC_TrackStatus[9],CAN_TX_TRACK_STATUS_509_CAN1
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[0],((CAN_TX_TRACK_MOVABLE_FAST01_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW01_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[1],((CAN_TX_TRACK_MOVABLE_FAST02_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW02_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[10],((CAN_TX_TRACK_MOVABLE_FAST11_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW11_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[11],((CAN_TX_TRACK_MOVABLE_FAST12_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW12_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[12],((CAN_TX_TRACK_MOVABLE_FAST13_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW13_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[13],((CAN_TX_TRACK_MOVABLE_FAST14_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW14_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[14],((CAN_TX_TRACK_MOVABLE_FAST15_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW15_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[15],((CAN_TX_TRACK_MOVABLE_FAST16_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW16_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[16],((CAN_TX_TRACK_MOVABLE_FAST17_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW17_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[17],((CAN_TX_TRACK_MOVABLE_FAST18_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW18_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[18],((CAN_TX_TRACK_MOVABLE_FAST19_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW19_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[19],((CAN_TX_TRACK_MOVABLE_FAST20_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW20_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[2],((CAN_TX_TRACK_MOVABLE_FAST03_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW03_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[20],((CAN_TX_TRACK_MOVABLE_FAST21_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW21_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[21],((CAN_TX_TRACK_MOVABLE_FAST22_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW22_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[22],((CAN_TX_TRACK_MOVABLE_FAST23_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW23_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[23],((CAN_TX_TRACK_MOVABLE_FAST24_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW24_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[24],((CAN_TX_TRACK_MOVABLE_FAST25_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW25_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[25],((CAN_TX_TRACK_MOVABLE_FAST26_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW26_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[26],((CAN_TX_TRACK_MOVABLE_FAST27_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW27_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[27],((CAN_TX_TRACK_MOVABLE_FAST28_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW28_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[28],((CAN_TX_TRACK_MOVABLE_FAST29_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW29_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[29],((CAN_TX_TRACK_MOVABLE_FAST30_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW30_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[3],((CAN_TX_TRACK_MOVABLE_FAST04_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW04_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[30],((CAN_TX_TRACK_MOVABLE_FAST31_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW31_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[31],((CAN_TX_TRACK_MOVABLE_FAST32_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW32_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[32],((CAN_TX_TRACK_MOVABLE_FAST33_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW33_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[33],((CAN_TX_TRACK_MOVABLE_FAST34_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW34_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[34],((CAN_TX_TRACK_MOVABLE_FAST35_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW35_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[35],((CAN_TX_TRACK_MOVABLE_FAST36_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW36_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[36],((CAN_TX_TRACK_MOVABLE_FAST37_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW37_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[37],((CAN_TX_TRACK_MOVABLE_FAST38_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW38_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[38],((CAN_TX_TRACK_MOVABLE_FAST39_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW39_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[39],((CAN_TX_TRACK_MOVABLE_FAST40_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW40_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[4],((CAN_TX_TRACK_MOVABLE_FAST05_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW05_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[40],((CAN_TX_TRACK_MOVABLE_FAST41_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW41_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[41],((CAN_TX_TRACK_MOVABLE_FAST42_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW42_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[42],((CAN_TX_TRACK_MOVABLE_FAST43_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW43_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[43],((CAN_TX_TRACK_MOVABLE_FAST44_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW44_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[44],((CAN_TX_TRACK_MOVABLE_FAST45_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW45_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[45],((CAN_TX_TRACK_MOVABLE_FAST46_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW46_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[46],((CAN_TX_TRACK_MOVABLE_FAST47_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW47_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[47],((CAN_TX_TRACK_MOVABLE_FAST48_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW48_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[48],((CAN_TX_TRACK_MOVABLE_FAST49_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW49_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[49],((CAN_TX_TRACK_MOVABLE_FAST50_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW50_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[5],((CAN_TX_TRACK_MOVABLE_FAST06_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW06_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[50],((CAN_TX_TRACK_MOVABLE_FAST51_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW51_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[51],((CAN_TX_TRACK_MOVABLE_FAST52_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW52_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[52],((CAN_TX_TRACK_MOVABLE_FAST53_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW53_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[53],((CAN_TX_TRACK_MOVABLE_FAST54_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW54_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[54],((CAN_TX_TRACK_MOVABLE_FAST55_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW55_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[55],((CAN_TX_TRACK_MOVABLE_FAST56_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW56_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[56],((CAN_TX_TRACK_MOVABLE_FAST57_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW57_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[57],((CAN_TX_TRACK_MOVABLE_FAST58_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW58_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[58],((CAN_TX_TRACK_MOVABLE_FAST59_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW59_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[59],((CAN_TX_TRACK_MOVABLE_FAST60_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW60_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[6],((CAN_TX_TRACK_MOVABLE_FAST07_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW07_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[60],((CAN_TX_TRACK_MOVABLE_FAST61_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW61_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[61],((CAN_TX_TRACK_MOVABLE_FAST62_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW62_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[62],((CAN_TX_TRACK_MOVABLE_FAST63_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW63_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[63],((CAN_TX_TRACK_MOVABLE_FAST64_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW64_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[7],((CAN_TX_TRACK_MOVABLE_FAST08_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW08_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[8],((CAN_TX_TRACK_MOVABLE_FAST09_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW09_540_CAN1 != 0.0))
-SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[9],((CAN_TX_TRACK_MOVABLE_FAST10_540_CAN1 != 0.0) ||(CAN_TX_TRACK_MOVABLE_SLOW10_540_CAN1 != 0.0))
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[0], CAN_TX_TRACK_MOVABLE_SLOW01_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST01_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[1], CAN_TX_TRACK_MOVABLE_SLOW02_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST02_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[10], CAN_TX_TRACK_MOVABLE_SLOW11_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST11_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[11], CAN_TX_TRACK_MOVABLE_SLOW12_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST12_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[12], CAN_TX_TRACK_MOVABLE_SLOW13_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST13_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[13], CAN_TX_TRACK_MOVABLE_SLOW14_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST14_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[14], CAN_TX_TRACK_MOVABLE_SLOW15_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST15_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[15], CAN_TX_TRACK_MOVABLE_SLOW16_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST16_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[16], CAN_TX_TRACK_MOVABLE_SLOW17_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST17_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[17], CAN_TX_TRACK_MOVABLE_SLOW18_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST18_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[18], CAN_TX_TRACK_MOVABLE_SLOW19_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST19_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[19], CAN_TX_TRACK_MOVABLE_SLOW20_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST20_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[2], CAN_TX_TRACK_MOVABLE_SLOW03_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST03_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[20], CAN_TX_TRACK_MOVABLE_SLOW21_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST21_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[21], CAN_TX_TRACK_MOVABLE_SLOW22_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST22_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[22], CAN_TX_TRACK_MOVABLE_SLOW23_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST23_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[23], CAN_TX_TRACK_MOVABLE_SLOW24_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST24_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[24], CAN_TX_TRACK_MOVABLE_SLOW25_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST25_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[25], CAN_TX_TRACK_MOVABLE_SLOW26_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST26_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[26], CAN_TX_TRACK_MOVABLE_SLOW27_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST27_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[27], CAN_TX_TRACK_MOVABLE_SLOW28_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST28_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[28], CAN_TX_TRACK_MOVABLE_SLOW29_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST29_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[29], CAN_TX_TRACK_MOVABLE_SLOW30_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST30_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[3], CAN_TX_TRACK_MOVABLE_SLOW04_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST04_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[30], CAN_TX_TRACK_MOVABLE_SLOW31_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST31_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[31], CAN_TX_TRACK_MOVABLE_SLOW32_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST32_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[32], CAN_TX_TRACK_MOVABLE_SLOW33_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST33_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[33], CAN_TX_TRACK_MOVABLE_SLOW34_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST34_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[34], CAN_TX_TRACK_MOVABLE_SLOW35_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST35_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[35], CAN_TX_TRACK_MOVABLE_SLOW36_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST36_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[36], CAN_TX_TRACK_MOVABLE_SLOW37_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST37_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[37], CAN_TX_TRACK_MOVABLE_SLOW38_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST38_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[38], CAN_TX_TRACK_MOVABLE_SLOW39_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST39_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[39], CAN_TX_TRACK_MOVABLE_SLOW40_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST40_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[4], CAN_TX_TRACK_MOVABLE_SLOW05_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST05_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[40], CAN_TX_TRACK_MOVABLE_SLOW41_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST41_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[41], CAN_TX_TRACK_MOVABLE_SLOW42_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST42_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[42], CAN_TX_TRACK_MOVABLE_SLOW43_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST43_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[43], CAN_TX_TRACK_MOVABLE_SLOW44_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST44_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[44], CAN_TX_TRACK_MOVABLE_SLOW45_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST45_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[45], CAN_TX_TRACK_MOVABLE_SLOW46_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST46_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[46], CAN_TX_TRACK_MOVABLE_SLOW47_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST47_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[47], CAN_TX_TRACK_MOVABLE_SLOW48_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST48_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[48], CAN_TX_TRACK_MOVABLE_SLOW49_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST49_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[49], CAN_TX_TRACK_MOVABLE_SLOW50_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST50_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[5], CAN_TX_TRACK_MOVABLE_SLOW06_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST06_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[50], CAN_TX_TRACK_MOVABLE_SLOW51_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST51_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[51], CAN_TX_TRACK_MOVABLE_SLOW52_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST52_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[52], CAN_TX_TRACK_MOVABLE_SLOW53_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST53_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[53], CAN_TX_TRACK_MOVABLE_SLOW54_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST54_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[54], CAN_TX_TRACK_MOVABLE_SLOW55_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST55_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[55], CAN_TX_TRACK_MOVABLE_SLOW56_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST56_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[56], CAN_TX_TRACK_MOVABLE_SLOW57_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST57_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[57], CAN_TX_TRACK_MOVABLE_SLOW58_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST58_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[58], CAN_TX_TRACK_MOVABLE_SLOW59_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST59_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[59], CAN_TX_TRACK_MOVABLE_SLOW60_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST60_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[6], CAN_TX_TRACK_MOVABLE_SLOW07_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST07_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[60], CAN_TX_TRACK_MOVABLE_SLOW61_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST61_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[61], CAN_TX_TRACK_MOVABLE_SLOW62_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST62_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[62], CAN_TX_TRACK_MOVABLE_SLOW63_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST63_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[63], CAN_TX_TRACK_MOVABLE_SLOW64_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST64_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[7], CAN_TX_TRACK_MOVABLE_SLOW08_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST08_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[8], CAN_TX_TRACK_MOVABLE_SLOW09_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST09_540_CAN1  
+Following pair produces a bool
+SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMovable[9], CAN_TX_TRACK_MOVABLE_SLOW10_540_CAN1 CAN_TX_TRACK_MOVABLE_FAST10_540_CAN1  
 SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMoving[0],CAN_TX_TRACK_MOVING01_540_CAN1
 SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMoving[1],CAN_TX_TRACK_MOVING02_540_CAN1
 SIN_out.Sens_out.DphRADFC_in.RADFC_TrackMoving[10],CAN_TX_TRACK_MOVING11_540_CAN1
@@ -5323,10 +5389,14 @@ SIN_out.Veh_out.VCU_in.VCU_stLoadShed,LoadShed_352_CAN4
 SIN_out.Veh_out.VCU_in.VCU_stLVBattWarn,VCULvBattWarn_352_CAN4
 SIN_out.Veh_out.VCU_in.VCU_stBattChgSts,LVBattChgSts_352_CAN4
 SIN_out.Veh_out.VCU_in.VCU_stActGear,VCUActGear_217_CAN0
-SIN_out.Veh_out.VCU_in.VCU_flgNGear,(VCUActGear_217_CAN0 == 0.0)?true:false
-SIN_out.Veh_out.VCU_in.VCU_flgDGear,(VCUActGear_217_CAN0 == 1.0)?true:false
-SIN_out.Veh_out.VCU_in.VCU_flgRGear,(VCUActGear_217_CAN0 == 2.0)?true:false
-SIN_out.Veh_out.VCU_in.VCU_flgPGear,(VCUActGear_217_CAN0 == 3.0)?true:false
+Following pair produces a bool
+SIN_out.Veh_out.VCU_in.VCU_flgNGear, VCUActGear_217_CAN0 
+Following pair produces a bool
+SIN_out.Veh_out.VCU_in.VCU_flgDGear, VCUActGear_217_CAN0 
+Following pair produces a bool
+SIN_out.Veh_out.VCU_in.VCU_flgRGear, VCUActGear_217_CAN0 
+Following pair produces a bool
+SIN_out.Veh_out.VCU_in.VCU_flgPGear, VCUActGear_217_CAN0 
 SIN_out.Veh_out.VCU_in.VCU_pntAccPedEffPos,AccrPedlEfcPosn_45_CAN0
 SIN_out.Veh_out.VCU_in.Vcu_trqTotMotrPosTrqCap,VCUTotlMotPosTqCp_44_CAN3
 SIN_out.Veh_out.VCU_in.Vcu_trqTotMotrNegTrqCap,VCUTotlMotNegTqCp_44_CAN3
@@ -5579,4 +5649,4 @@ SIN_out.Drv_out.DIN_in.DIN_stModeTogDecSwt,ModeTogDecSwtSts_29F_CAN0
 SIN_out.Drv_out.DIN_in.DIN_stNOMISwt,NOMICtrlPushSwtSts_29F_CAN0
 SIN_out.Drv_out.DIN_in.DIN_stMenuVolUpSwt,MenuOrVolUpPushSwtSts_29F_CAN0
 SIN_out.Drv_out.DIN_in.DIN_stMenuVolDwnSwt,MenuOrVolDwnPushSwtSts_29F_CAN0
-SIN_out.Drv_out.DIN_in.DIN_TmpInputs.DIN_stCruSpdLimSwtSts,(unsigned char)CrsSpdLmtrSwStat_1E1_CAN0
+SIN_out.Drv_out.DIN_in.DIN_TmpInputs.DIN_stCruSpdLimSwtSts, CrsSpdLmtrSwStat_1E1_CAN0 
