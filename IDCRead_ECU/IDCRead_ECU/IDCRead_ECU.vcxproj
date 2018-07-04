@@ -109,13 +109,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_WINDOWS;_WIN32;_WIN32_WINNT=0x0601;BOOST_ALL_NO_LIB;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(IbeoSDKDir)\src;$(BoostDir)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\opencv\build\include\opencv2;D:\opencv\build\include\opencv;D:\opencv\build\include;$(IbeoSDKDir)\src;$(BoostDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(IbeoSDKDir)\bin\$(Platformname)\$(Configuration)\;$(BoostLibDir)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>ibeosdk_VS2012.lib;libboost_thread-vc110-mt-gd-$(BoostVersionInLibname).lib;libboost_system-vc110-mt-gd-$(BoostVersionInLibname).lib;libboost_date_time-vc110-mt-gd-$(BoostVersionInLibname).lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\opencv\build\x64\vc14\lib;$(IbeoSDKDir)\bin\$(Platformname)\$(Configuration)\;$(BoostLibDir)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ibeosdk_VS2012.lib;opencv_world341d.lib;libboost_thread-vc110-mt-gd-$(BoostVersionInLibname).lib;libboost_system-vc110-mt-gd-$(BoostVersionInLibname).lib;libboost_date_time-vc110-mt-gd-$(BoostVersionInLibname).lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
