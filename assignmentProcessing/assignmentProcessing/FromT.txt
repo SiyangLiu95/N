@@ -1,6 +1,4 @@
 void
-t1 = a1;
-t11 = a11;
+     t1 = a;
 t2=b;
-t3=c;
-t3t1=ca;
+    t3=c;
