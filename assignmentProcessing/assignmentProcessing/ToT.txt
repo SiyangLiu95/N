@@ -1,16 +1,18 @@
 void
 
-bla
-
 blabla
-	a=t1;
+	a1=t1;
 b=t2;
 	c=
 		t3;
 b=(cast)t2;
-b=(t2 != 0);
-b=(t1 != 0) 
+b!0=(t2 != 0);
+long expression=(t1 != 0) 
 	+ (t2 != 0) + (t3 != 0);
 	err=t;
 
-biu
+Debug:
+a11 = t11;
+ca = t3t1;
+
+bla
