@@ -1,7 +1,7 @@
 // Siyang Liu (6796)
 // Nio Automotives
 // 2018-07-10
-// IbeoDraw.cpp: visualize Ibeo object information
+// IbeoDraw.cpp: visualize Ibeo object information + Send struct via UDP
 
 #pragma once
 
@@ -121,8 +121,9 @@ void setBackground(Mat& img) {
 	//parse fov into 3*3 grid, each block represents 50m*50m irl.
 	line(img, Point(0, w / 3), Point(w, w / 3), Scalar(128, 138, 125), 1, LINE_8);
 	line(img, Point(0, w * 2 / 3), Point(w, w * 2 / 3), Scalar(128, 138, 125), 1, LINE_8);
-	line(img, Point(w / 3, 0), Point(w / 3, w + 20), Scalar(128, 138, 125), 1, LINE_8);
-	line(img, Point(w * 2 / 3, 0), Point(w * 2 / 3, w + 20), Scalar(128, 138, 125), 1, LINE_8);
+	line(img, Point(w / 2, 0), Point(w / 2, w + 20), Scalar(128, 138, 125), 1, LINE_8);
+	line(img, Point(w / 6, 0), Point(w / 6, w + 20), Scalar(128, 138, 125), 1, LINE_8);
+	line(img, Point(w * 5 / 6, 0), Point(w * 5 / 6, w + 20), Scalar(128, 138, 125), 1, LINE_8);
 	//origin
 	line(img, Point(w / 2, w), Point(w / 2, w * 5 / 6), Scalar(0, 0, 255), 2, LINE_8);
 	line(img, Point(w / 2, w), Point(w / 3, w), Scalar(0, 255, 0), 2, LINE_8);
@@ -145,6 +146,7 @@ void drawFrame(IbeoECUObjList& ol) {
 			) {
 			addObj2Frame(fov, ol.IbeoECUObjs[i]);
 		}
+		//addObj2Frame(fov, ol.IbeoECUObjs[i]);
 	}
 	imshow("ECU IDC File Replay", fov);
 	waitKey(1);
