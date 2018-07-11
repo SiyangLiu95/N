@@ -21,10 +21,10 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IbeoDraw.h">
+    <ClInclude Include="..\..\utility\IbeoDraw.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IbeoECUObjTypeDef.h">
+    <ClInclude Include="..\..\utility\IbeoECUObjTypeDef.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,7 +35,7 @@
     <ClCompile Include="Live_ECU.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IbeoDraw.cpp">
+    <ClCompile Include="..\..\utility\IbeoDraw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
