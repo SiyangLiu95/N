@@ -1,11 +1,13 @@
+// Siyang Liu (6796)
+// NIO Automotives
+// 2018-07-11
+// IbeoUDPSend.cpp: Send objList struct through UDP
 
-#include <iostream>
-
-#include "udpSend.h"
+#include "IbeoUDPSend.h"
 
 using namespace std;
 
-udpSend::udpSend(void)
+IbeoUDPSend::IbeoUDPSend(void)
 {
 	m_socket = INVALID_SOCKET;
 
@@ -19,12 +21,12 @@ udpSend::udpSend(void)
 	}
 }
 
-udpSend::~udpSend(void)
+IbeoUDPSend::~IbeoUDPSend(void)
 {
 	WSACleanup();
 }
 
-bool udpSend::InitSocket(const string strIPAddress, const string strPort)
+bool IbeoUDPSend::InitSocket(const string strIPAddress, const string strPort)
 {
 
 	//创建套接字,ipv4,报文，udp协议
@@ -46,53 +48,23 @@ bool udpSend::InitSocket(const string strIPAddress, const string strPort)
 
 	return true;
 
-
-
 }
 
-void udpSend::CleanSocket()
+void IbeoUDPSend::CleanSocket()
 {
 	shutdown(m_socket, 0x01);
 
 	closesocket(m_socket);
 }
 
-
-bool udpSend::SendStringData(const string strMessage)
-{
-
-	if (sendto(m_socket,
-		(char *)&strMessage,
-		sizeof(strMessage),
-		0,
-		(struct sockaddr FAR *) &m_sockDesAddress,
-		sizeof(m_sockDesAddress)) == SOCKET_ERROR)
-	{
-		//报错
-
-		cout << "sendto failed! Error: %d" << WSAGetLastError() << endl;
-
-		closesocket(m_socket);
-
-
-		return false;
-
-	}
-	else
-	{
-		return true;
-	}
-}
-
-
-bool udpSend::SendStructData(const Student student)
+bool IbeoUDPSend::SendStructData(const IbeoECUObjList objlist)
 {
 	//需要根据不同的结构体名称进行修改！
 	if (sendto(m_socket,
-		(char *)&student,
-		sizeof(student),
+		(char*) &objlist,
+		sizeof(objlist),
 		0,
-		(struct sockaddr FAR *) &m_sockDesAddress,
+		(struct sockaddr FAR*) &m_sockDesAddress,
 		sizeof(m_sockDesAddress)) == SOCKET_ERROR)
 	{
 		//报错
@@ -101,7 +73,6 @@ bool udpSend::SendStructData(const Student student)
 		closesocket(m_socket);
 
 		return false;
-
 	}
 	else
 	{
@@ -109,35 +80,7 @@ bool udpSend::SendStructData(const Student student)
 	}
 }
 
-
-bool udpSend::SendClassData(const Person person)
-{
-	//需要根据不同的类名称进行修改！
-	if (sendto(m_socket,
-		(char *)&person,
-		sizeof(person),
-		0,
-		(struct sockaddr FAR *) &m_sockDesAddress,
-		sizeof(m_sockDesAddress)) == SOCKET_ERROR)
-	{
-		//报错
-
-		cout << "sendto failed! Error: %d" << WSAGetLastError() << endl;
-
-		closesocket(m_socket);
-
-
-		return false;
-
-	}
-	else
-	{
-		return true;
-	}
-}
-
-
-void udpSend::InitSockAddress(const string strIPAddress, const string strPort)
+void IbeoUDPSend::InitSockAddress(const string strIPAddress, const string strPort)
 {
 	//本地sock地址设置
 	m_sockLocalAddress.sin_family = AF_INET;     //ipv4地址类型

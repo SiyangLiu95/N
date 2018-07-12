@@ -1,5 +1,5 @@
 // Siyang Liu (6796)
-// Nio Automotives
+// NIO Automotives
 // 2018-07-10
 // IbeoECUObjTypeDef.h: define object struct types
 
@@ -7,8 +7,8 @@
 
 #include <cstdlib>
 
-#ifndef _SIYANG_LIU_IBEO_ECU_OBJ_
-#define _SIYANG_LIU_IBEO_ECU_OBJ_
+#ifndef _IBEO_ECU_OBJ_TYPE_DEF_
+#define _IBEO_ECU_OBJ_TYPE_DEF_
 
 typedef struct {
 	uint16_t objID;

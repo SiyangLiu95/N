@@ -1,7 +1,7 @@
 // Siyang Liu (6796)
-// Nio Automotives
+// NIO Automotives
 // 2018-07-10
-// IbeoDraw.cpp: visualize Ibeo object information
+// IbeoDraw.cpp: visualize Ibeo object information + send objList through UDP
 
 #pragma once
 
@@ -136,33 +136,72 @@ void setBackground(Mat& img) {
 	addLine(img, Point(w / 2, w), -fullFOV / 2, 800, Scalar(128, 138, 125), 1);
 }
 
-void drawFrame() {
+void drawFrame(Mat& fov) {
+	Mat frame = fov.clone(); //cloning takes too much memory space when iteration # gets high?
+	IbeoECUObjList ol = objListQ.front();
+
+	for (int i = 0; i < ol.nbOfObjects; i++) {
+		//if ((ol.IbeoECUObjs[i].classification == 3) //ped
+		//	|| (ol.IbeoECUObjs[i].classification == 4) //bicycle
+		//	|| (ol.IbeoECUObjs[i].classification == 5) //car
+		//	|| (ol.IbeoECUObjs[i].classification == 6) //truck
+		//	|| (ol.IbeoECUObjs[i].classification == 15) //mbike
+		//	) {
+		//	addObj2Frame(frame, ol.IbeoECUObjs[i]);
+		//}
+		addObj2Frame(frame, ol.IbeoECUObjs[i]);
+	}
+	imshow("ECU IDC File Replay", frame);
+	waitKey(1);
+}
+
+void doSubThread() {
+	//set FOV background
 	Mat fov = Mat::zeros(w + 20, w, CV_8UC3); // leave space at bottom
 	setBackground(fov);
+
+	//initialize UDP address & socket
+	IbeoUDPSend sendList;
+	sendList.InitSocket("100.100.0.5", "1001");
+
 	while (true) {
 		if (!objListQ.empty()) {
-			Mat frame = fov.clone();
 			IbeoECUObjList ol = objListQ.front();
 
+			// draw frame
+			Mat frame = fov.clone(); //cloning takes too much memory space when iteration # gets high?
+			
+
 			for (int i = 0; i < ol.nbOfObjects; i++) {
-				if ((ol.IbeoECUObjs[i].classification == 3) //ped
-					|| (ol.IbeoECUObjs[i].classification == 4) //bicycle
-					|| (ol.IbeoECUObjs[i].classification == 5) //car
-					|| (ol.IbeoECUObjs[i].classification == 6) //truck
-					|| (ol.IbeoECUObjs[i].classification == 15) //mbike
-					) {
-					addObj2Frame(frame, ol.IbeoECUObjs[i]);
-				}
+				//if ((ol.IbeoECUObjs[i].classification == 3) //ped
+				//	|| (ol.IbeoECUObjs[i].classification == 4) //bicycle
+				//	|| (ol.IbeoECUObjs[i].classification == 5) //car
+				//	|| (ol.IbeoECUObjs[i].classification == 6) //truck
+				//	|| (ol.IbeoECUObjs[i].classification == 15) //mbike
+				//	) {
+				//	addObj2Frame(frame, ol.IbeoECUObjs[i]);
+				//}
+				addObj2Frame(frame, ol.IbeoECUObjs[i]);
 			}
 			imshow("ECU IDC File Replay", frame);
 			waitKey(1);
 
+
+
+			//do UDP sending
+			if (sendList.SendStructData(ol)) {
+
+			}
+
+
+
 			objListQ.pop();
-			std::cerr << "pop Q; current Q size = " << objListQ.size() << std::endl;
+			std::cerr << "pop Q;  current Q size = " << objListQ.size() << std::endl;
 		}
 		else {
 			std::cerr << "Q empty" << std::endl;
 		}
+
 		Sleep(10);
 	}
 }

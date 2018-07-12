@@ -1,5 +1,5 @@
 // Siyang Liu (6796)
-// Nio Automotives
+// NIO Automotives
 // 2018-07-10
 // IbeoDraw.h: defines visualization functions
 
@@ -14,10 +14,12 @@
 
 #include "IbeoECUObjTypeDef.h"
 
+#include "IbeoUDPSend.h"
+
 using namespace cv;
 
-#ifndef _SIYANG_LIU_IBEO_DRAW_
-#define _SIYANG_LIU_IBEO_DRAW_
+#ifndef _IBEO_DRAW_
+#define _IBEO_DRAW_
 
 #define w 900 //define opencv window size
 #define unit 50 //define length(m) of each step irl
@@ -34,6 +36,8 @@ void addLine(Mat& img, Point start, float angle, int length, Scalar color, int t
 
 void setBackground(Mat& img);
 
-void drawFrame(); //takes in current obj list Q and draw all objects
+void drawFrame(Mat& fov); //unused
+
+void doSubThread(); //draw frame + send obj list through UDP
 
 #endif
