@@ -3,8 +3,6 @@
 // 2018-07-11
 // IbeoUDPReceive.h: Receive objList struct via UDP
 
-#pragma once
-
 #include <string>
 #include <iostream>
 #include <WinSock.h>
@@ -34,9 +32,6 @@ public:
 
 	//发送指定结构体数据
 	bool ReceiveStructData(IbeoECUObjList* objlist);
-
-private:
-	void InitSockAddress(const string strIPAddress, const string strPort);
 
 private:
 	SOCKET m_socket;

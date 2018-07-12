@@ -1,4 +1,4 @@
-// Siyang Liu (6796)
+// Siyang Liu (6796) implementing template from Siwei Peng
 // NIO Automotives
 // 2018-07-11
 // IbeoUDPSend.cpp: Send objList struct through UDP
@@ -57,18 +57,50 @@ void IbeoUDPSend::CleanSocket()
 	closesocket(m_socket);
 }
 
-bool IbeoUDPSend::SendStructData(const IbeoECUObjList objlist)
+bool IbeoUDPSend::SendStringData(const string strMessage)
 {
-	//需要根据不同的结构体名称进行修改！
+
 	if (sendto(m_socket,
-		(char*) &objlist,
-		sizeof(objlist),
+		(char *)&strMessage,
+		sizeof(strMessage),
 		0,
-		(struct sockaddr FAR*) &m_sockDesAddress,
+		(struct sockaddr FAR *) &m_sockDesAddress,
 		sizeof(m_sockDesAddress)) == SOCKET_ERROR)
 	{
 		//报错
+
 		cout << "sendto failed! Error: %d" << WSAGetLastError() << endl;
+
+		closesocket(m_socket);
+
+
+		return false;
+
+	}
+	else
+	{
+		cout << "string sent" << endl;
+
+
+		return true;
+	}
+}
+
+bool IbeoUDPSend::SendStructData(const IbeoECUObj objlist)
+{
+	
+
+
+	//需要根据不同的结构体名称进行修改！
+	if (sendto(m_socket,
+		(char *) &objlist,
+		sizeof(objlist),
+		0,
+		(struct sockaddr FAR *) &m_sockDesAddress,
+		sizeof(m_sockDesAddress)) == SOCKET_ERROR)
+	{
+		//报错
+		cout << "sendto failed! Error: " << WSAGetLastError() << endl;
 
 		closesocket(m_socket);
 
@@ -95,5 +127,16 @@ void IbeoUDPSend::InitSockAddress(const string strIPAddress, const string strPor
 	m_sockDesAddress.sin_port = htons(atol(strPort.c_str()));
 	//地址
 	m_sockDesAddress.sin_addr.s_addr = INADDR_BROADCAST;
+
+
+	//if (bind(m_socket,
+	//	(struct sockaddr FAR *) &m_sockLocalAddress,
+	//	sizeof(m_sockLocalAddress)) == SOCKET_ERROR)
+	//{
+	//	//报错
+	//	cout << "Binding socket failed! Error: " << WSAGetLastError() << endl;
+	//	closesocket(m_socket);
+	//	return;
+	//}
 
 }

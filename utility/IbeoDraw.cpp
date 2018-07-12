@@ -162,7 +162,8 @@ void doSubThread() {
 
 	//initialize UDP address & socket
 	IbeoUDPSend sendList;
-	sendList.InitSocket("100.100.0.5", "1001");
+	sendList.InitSocket("192.168.0.15", "1001");
+	cout << "Send socket initialized " << endl;
 
 	while (true) {
 		if (!objListQ.empty()) {
@@ -182,6 +183,8 @@ void doSubThread() {
 				//	addObj2Frame(frame, ol.IbeoECUObjs[i]);
 				//}
 				addObj2Frame(frame, ol.IbeoECUObjs[i]);
+
+				sendList.SendStructData(ol.IbeoECUObjs[i]);
 			}
 			imshow("ECU IDC File Replay", frame);
 			waitKey(1);
@@ -189,9 +192,8 @@ void doSubThread() {
 
 
 			//do UDP sending
-			if (sendList.SendStructData(ol)) {
-
-			}
+			//sendList.SendStructData(ol);
+			//sendList.SendStringData("test");
 
 
 

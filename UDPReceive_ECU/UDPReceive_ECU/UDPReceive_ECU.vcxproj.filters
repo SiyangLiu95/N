@@ -35,5 +35,8 @@
     <ClCompile Include="UDPReceive_ECU.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\utility\IbeoUDPReceive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

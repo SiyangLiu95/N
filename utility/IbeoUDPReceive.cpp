@@ -86,6 +86,7 @@ bool IbeoUDPReceive::ReceiveStructData(IbeoECUObjList* objlist)
 	int iRecvLen = sizeof(m_sockReceiveAddress);
 
 	IbeoECUObjList ol;
+
 	if (recvfrom(m_socket,
 		//接收数据的缓冲区
 		(char *)&ol,
