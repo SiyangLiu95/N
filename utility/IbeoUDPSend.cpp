@@ -1,4 +1,4 @@
-// Siyang Liu (6796) implementing template from Siwei Peng
+// Siyang Liu (6796) implementing template by Siwei Peng
 // NIO Automotives
 // 2018-07-11
 // IbeoUDPSend.cpp: Send objList struct through UDP
@@ -86,15 +86,37 @@ bool IbeoUDPSend::SendStringData(const string strMessage)
 	}
 }
 
-bool IbeoUDPSend::SendStructData(const IbeoECUObj objlist)
+bool IbeoUDPSend::SendStructData(const IbeoECUObjList objlist)
 {
-	
-
 
 	//需要根据不同的结构体名称进行修改！
 	if (sendto(m_socket,
 		(char *) &objlist,
-		sizeof(objlist),
+		sizeof(IbeoECUObj) * 3 + sizeof(int) + sizeof(uint32_t),
+		0,
+		(struct sockaddr FAR *) &m_sockDesAddress,
+		sizeof(m_sockDesAddress)) == SOCKET_ERROR)
+	{
+		//报错
+		cout << "sendto failed! Error: " << WSAGetLastError() << endl;
+
+		closesocket(m_socket);
+
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+bool IbeoUDPSend::SendStructData(const IbeoECUObj obj)
+{
+
+	//需要根据不同的结构体名称进行修改！
+	if (sendto(m_socket,
+		(char *)&obj,
+		sizeof(obj),
 		0,
 		(struct sockaddr FAR *) &m_sockDesAddress,
 		sizeof(m_sockDesAddress)) == SOCKET_ERROR)

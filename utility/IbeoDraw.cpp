@@ -165,35 +165,48 @@ void doSubThread() {
 	sendList.InitSocket("192.168.0.15", "1001");
 	cout << "Send socket initialized " << endl;
 
+	waitKey(0);
+
 	while (true) {
 		if (!objListQ.empty()) {
 			IbeoECUObjList ol = objListQ.front();
 
 			// draw frame
-			Mat frame = fov.clone(); //cloning takes too much memory space when iteration # gets high?
+			//Mat frame = fov.clone(); //cloning takes too much memory space when iteration # gets high?
 			
 
 			for (int i = 0; i < ol.nbOfObjects; i++) {
-				//if ((ol.IbeoECUObjs[i].classification == 3) //ped
-				//	|| (ol.IbeoECUObjs[i].classification == 4) //bicycle
-				//	|| (ol.IbeoECUObjs[i].classification == 5) //car
-				//	|| (ol.IbeoECUObjs[i].classification == 6) //truck
-				//	|| (ol.IbeoECUObjs[i].classification == 15) //mbike
-				//	) {
-				//	addObj2Frame(frame, ol.IbeoECUObjs[i]);
-				//}
-				addObj2Frame(frame, ol.IbeoECUObjs[i]);
+			//	if ((ol.IbeoECUObjs[i].classification == 3) //ped
+			//		|| (ol.IbeoECUObjs[i].classification == 4) //bicycle
+			//		|| (ol.IbeoECUObjs[i].classification == 5) //car
+			//		|| (ol.IbeoECUObjs[i].classification == 6) //truck
+			//		|| (ol.IbeoECUObjs[i].classification == 15) //mbike
+			//		) {
+			//		addObj2Frame(frame, ol.IbeoECUObjs[i]);
+			//	}
 
-				sendList.SendStructData(ol.IbeoECUObjs[i]);
+				//draw all objects
+				//addObj2Frame(frame, ol.IbeoECUObjs[i]);
+
+
+				//UDP
+				 
+				//sendList.SendStructData(ol.IbeoECUObjs[i]); //send obj
+				//std::cerr << ol.IbeoECUObjs[i].cnt << std::endl;
+				
+				//Sleep(1);
+			
 			}
-			imshow("ECU IDC File Replay", frame);
-			waitKey(1);
+			//show frame
+			//imshow("ECU IDC File Replay", frame);
+			//waitKey(1);
 
 
 
 			//do UDP sending
-			//sendList.SendStructData(ol);
-			//sendList.SendStringData("test");
+			sendList.SendStructData(ol); //send object list
+
+			//sendList.SendStringData("test"); // send string
 
 
 
@@ -204,6 +217,6 @@ void doSubThread() {
 			std::cerr << "Q empty" << std::endl;
 		}
 
-		Sleep(10);
+		Sleep(5);
 	}
 }

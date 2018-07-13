@@ -1,4 +1,4 @@
-// Siyang Liu (6796)
+// Siyang Liu (6796) implementing template by Siwei Peng
 // NIO Automotives
 // 2018-07-11
 // IbeoUDPReceive.h: Receive objList struct via UDP
@@ -30,9 +30,9 @@ public:
 
 	void CleanSocket();
 
-	//发送指定结构体数据
+	bool ReceiveStringData(string& strMessage);
 	bool ReceiveStructData(IbeoECUObjList* objlist);
-
+	bool ReceiveStructData(IbeoECUObj* obj);
 private:
 	SOCKET m_socket;
 	sockaddr_in m_sockLocalAddress; //local socket + address

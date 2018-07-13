@@ -11,6 +11,7 @@
 #define _IBEO_ECU_OBJ_TYPE_DEF_
 
 typedef struct {
+	//int cnt; //order number of current object in object list
 	uint16_t objID;
 	uint16_t flag;  /*	Flags_TrackedByStationaryModel  = 0x0040, ///< is object tracked using stationary model
 						Flags_Mobile                    = 0x0080, ///< Has been detected/validated as mobile. (the current tracking model is irrelevant; this flag just means it has been moving at some time)
@@ -55,7 +56,7 @@ typedef struct {
 #ifndef _SIYANG_LIU_IBEO_ECU_OBJ_LIST_
 #define _SIYANG_LIU_IBEO_ECU_OBJ_LIST_
 
-#define _MAX_OBJ_NUM_ 1023
+#define _MAX_OBJ_NUM_ 255
 
 typedef struct {
 	uint32_t scanStartTimestamp; // avaiable: Frac, Milli, Micro seconds

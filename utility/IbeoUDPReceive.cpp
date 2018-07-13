@@ -1,4 +1,4 @@
-// Siyang Liu (6796)
+// Siyang Liu (6796) implementing template by Siwei Peng
 // NIO Automotives
 // 2018-07-11
 // IbeoUDPReceive.cpp: Receive objList struct via UDP
@@ -78,7 +78,37 @@ void IbeoUDPReceive::CleanSocket()
 	closesocket(m_socket);
 }
 
-bool IbeoUDPReceive::ReceiveStructData(IbeoECUObjList* objlist)
+
+bool IbeoUDPReceive::ReceiveStringData(string& strMessage)
+{
+
+	m_sockReceiveAddress.sin_family = AF_INET;
+
+	int iRecvLen = sizeof(m_sockReceiveAddress);
+
+	// 从组播组接收数据报
+	if (recvfrom(m_socket,
+		//接收数据的缓冲区
+		(char *)&strMessage,
+		//缓冲区长度
+		100,
+		//接收数据的方式
+		0,
+		(struct sockaddr FAR *)&m_sockReceiveAddress,
+		&iRecvLen) == SOCKET_ERROR)
+	{
+		//报错		
+		cout << "recvfrom failed! Error: " << WSAGetLastError() << endl;
+		closesocket(m_socket);
+		return FALSE;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+bool IbeoUDPReceive::ReceiveStructData(IbeoECUObjList* objlist) // NOT WORKING
 {
 	//需要根据不同的结构体名称进行修改！
 	m_sockReceiveAddress.sin_family = AF_INET;
@@ -89,9 +119,40 @@ bool IbeoUDPReceive::ReceiveStructData(IbeoECUObjList* objlist)
 
 	if (recvfrom(m_socket,
 		//接收数据的缓冲区
-		(char *)&ol,
+		(char *)objlist,
 		//缓冲区长度
-		sizeof(ol),
+		sizeof(IbeoECUObj) * _MAX_OBJ_NUM_ + sizeof(int) + sizeof(uint32_t),
+		//接收数据的方式
+		0,
+		(struct sockaddr FAR *)&m_sockReceiveAddress,
+		&iRecvLen) == SOCKET_ERROR)
+	{
+		//报错		
+		cout << "recvfrom failed! Error: " << WSAGetLastError() << endl;
+		closesocket(m_socket);
+		return FALSE;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+
+bool IbeoUDPReceive::ReceiveStructData(IbeoECUObj* obj)
+{
+	//需要根据不同的结构体名称进行修改！
+	m_sockReceiveAddress.sin_family = AF_INET;
+
+	int iRecvLen = sizeof(m_sockReceiveAddress);
+
+	IbeoECUObj objT;
+
+	if (recvfrom(m_socket,
+		//接收数据的缓冲区
+		(char *)obj,
+		//缓冲区长度
+		sizeof(objT),
 		//接收数据的方式
 		0,
 		(struct sockaddr FAR *)&m_sockReceiveAddress,

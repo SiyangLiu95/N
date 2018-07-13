@@ -1,4 +1,4 @@
-﻿// Siyang Liu (6796) implementing template from Siwei Peng
+﻿// Siyang Liu (6796) implementing template by Siwei Peng
 // NIO Automotives
 // 2018-07-11
 // IbeoUDPSend.h: Send objList struct through UDP
@@ -34,7 +34,8 @@ public:
 	bool SendStringData(const string strMessage);
 
 	//发送指定结构体数据
-	bool SendStructData(const IbeoECUObj objlist);
+	bool SendStructData(const IbeoECUObj obj);
+	bool SendStructData(const IbeoECUObjList objlist);
 
 private:
 	void InitSockAddress(const string strIPAddress, const string strPort);
