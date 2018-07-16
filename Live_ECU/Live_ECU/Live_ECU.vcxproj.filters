@@ -27,6 +27,9 @@
     <ClInclude Include="..\..\utility\IbeoECUObjTypeDef.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\utility\IbeoUDPSend.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -36,6 +39,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\utility\IbeoDraw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utility\IbeoUDPSend.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -39,15 +39,17 @@ void addObj2Frame(Mat& img, IbeoECUObj& o) {
 	float cx = o.centerX;
 	float cy = o.centerY;
 	myRotate(cx, cy, -o.orientation);
-	float pt1x = cx - o.length / (float)2.00000;
-	float pt2x = cx + o.length / (float)2.00000;
-	float pt1y = cy - o.width / (float)2.00000;
-	float pt2y = cy + o.width / (float)2.00000;
-	float arrowx = cx + +o.length / (float)2.00000 + sqrtf(o.relVelX * o.relVelX + o.relVelY * o.relVelY);
+	//float pt1x = cx - o.length / (float)2.00000;
+	//float pt2x = cx + o.length / (float)2.00000;
+	//float pt1y = cy - o.width / (float)2.00000;
+	//float pt2y = cy + o.width / (float)2.00000;
+	float arrowx = cx + o.length / (float)2.00000 + sqrtf(o.relVelX * o.relVelX + o.relVelY * o.relVelY);
 	float arrowy = cy;
+	float L = o.length;
+	float W = o.width;
 	myRotate(cx, cy, o.orientation);
-	myRotate(pt1x, pt1y, o.orientation);
-	myRotate(pt2x, pt2y, o.orientation);
+	//myRotate(pt1x, pt1y, o.orientation);
+	//myRotate(pt2x, pt2y, o.orientation);
 	myRotate(arrowx, arrowy, o.orientation);
 	
 	//std::cerr << "coordinate in ibeo system:" << std::endl;
@@ -63,14 +65,17 @@ void addObj2Frame(Mat& img, IbeoECUObj& o) {
 	//std::cerr << std::endl;
 
 	//convert ibeo coordinate to opencv mat val
-	pt1x *= w / unit / 3; //900 pixels represents 150m irl.
-	pt1y *= w / unit / 3;
-	pt2x *= w / unit / 3;
-	pt2y *= w / unit / 3; 
-	arrowx *= w / unit / 3;
-	arrowy *= w / unit / 3;
+	//900 pixels represents 150m irl.
+	//pt1x *= w / unit / 3; 
+	//pt1y *= w / unit / 3;
+	//pt2x *= w / unit / 3;
+	//pt2y *= w / unit / 3; 
 	cx *= w / unit / 3;
 	cy *= w / unit / 3;
+	arrowx *= w / unit / 3;
+	arrowy *= w / unit / 3;
+	L *= w / unit / 3;
+	W *= w / unit / 3;
 	//std::cerr << "mat values:" << std::endl;
 	//std::cerr << cx << std::endl;
 	//std::cerr << cy << std::endl;
@@ -93,12 +98,23 @@ void addObj2Frame(Mat& img, IbeoECUObj& o) {
 	//std::cerr << "arrow y = " << (float)w - arrowx << std::endl;
 	//std::cerr << std::endl;
 
-	rectangle(img,
+	RotatedRect rRect(
+		Point2f((float)w / 2.00000 - cy, (float)w - cx),
+		Point2f(W, L),
+		-o.orientation * 180.00000 / 3.1415926
+	);
+	Point2f vertices[4]; 
+	rRect.points(vertices);
+	for (int i = 0; i < 4; i++)
+		line(img, vertices[i], vertices[(i + 1) % 4], myColor(o.classification), 2, LINE_8, 0);
+
+	/*rectangle(img,   //Always up facing Rectangle
 		Point(w / 2 - (int)pt1y, w - (int)pt1x),
 		Point(w / 2 - (int)pt2y, w - (int)pt2x),
 		myColor(o.classification),
 		2, LINE_8, 0
-	);
+	);*/
+
 	arrowedLine(img,
 		Point(w / 2 - (int)cy, w - (int)cx), //box center location
 		Point(w / 2 - (int)arrowy, w - (int)arrowx),
@@ -156,6 +172,9 @@ void drawFrame(Mat& fov) {
 }
 
 void doSubThread() {
+	// initialize subthread sleep time 
+	uint subThreadSleep = 5;
+
 	//set FOV background
 	Mat fov = Mat::zeros(w + 20, w, CV_8UC3); // leave space at bottom
 	setBackground(fov);
@@ -164,8 +183,6 @@ void doSubThread() {
 	IbeoUDPSend sendList;
 	sendList.InitSocket("192.168.0.15", "1001");
 	cout << "Send socket initialized " << endl;
-
-	waitKey(0);
 
 	while (true) {
 		if (!objListQ.empty()) {
@@ -204,19 +221,24 @@ void doSubThread() {
 
 
 			//do UDP sending
-			sendList.SendStructData(ol); //send object list
-
 			//sendList.SendStringData("test"); // send string
+			sendList.SendStructData(ol); //send object list
 
 
 
 			objListQ.pop();
-			std::cerr << "pop Q;  current Q size = " << objListQ.size() << std::endl;
+			std::cerr << "Pop Q;  current Q size = " << objListQ.size() << std::endl;
 		}
 		else {
 			std::cerr << "Q empty" << std::endl;
 		}
 
-		Sleep(5);
+		if ((objListQ.size() > 2) && (subThreadSleep > 0)) {
+			subThreadSleep--;
+		}
+		else if (objListQ.empty()) {
+			subThreadSleep++;
+		}
+		Sleep(subThreadSleep);
 	}
 }

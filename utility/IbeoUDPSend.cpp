@@ -79,8 +79,7 @@ bool IbeoUDPSend::SendStringData(const string strMessage)
 	}
 	else
 	{
-		cout << "string sent" << endl;
-
+		cout << "UDP: String sent" << endl;
 
 		return true;
 	}
@@ -106,6 +105,7 @@ bool IbeoUDPSend::SendStructData(const IbeoECUObjList objlist)
 	}
 	else
 	{
+		cout << "UDP: Ibeo ECU object list sent" << endl;
 		return true;
 	}
 }
@@ -130,6 +130,7 @@ bool IbeoUDPSend::SendStructData(const IbeoECUObj obj)
 	}
 	else
 	{
+		cout << "UDP: Ibeo ECU object sent" << endl;
 		return true;
 	}
 }

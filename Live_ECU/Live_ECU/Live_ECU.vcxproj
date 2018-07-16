@@ -161,11 +161,13 @@
   <ItemGroup>
     <ClInclude Include="..\..\utility\IbeoDraw.h" />
     <ClInclude Include="..\..\utility\IbeoECUObjTypeDef.h" />
+    <ClInclude Include="..\..\utility\IbeoUDPSend.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\utility\IbeoDraw.cpp" />
+    <ClCompile Include="..\..\utility\IbeoUDPSend.cpp" />
     <ClCompile Include="Live_ECU.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
