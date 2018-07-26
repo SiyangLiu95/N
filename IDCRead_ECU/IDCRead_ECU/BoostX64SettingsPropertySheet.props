@@ -5,7 +5,7 @@
     <BoostVersionInPath>$(BoostVersionInLibname)_0</BoostVersionInPath>
     <BoostDir>D:\Boost\boost_$(BoostVersionInPath)</BoostDir>
     <BoostLibDir>$(BoostDir)\stage\lib</BoostLibDir>
-    <IbeoSDKDir>D:\Scala\IbeoSDK5.2.2</IbeoSDKDir>
+    <IbeoSDKDir>D:\Scala\IbeoSDK5.3.1</IbeoSDKDir>
   </PropertyGroup>
   <PropertyGroup>
     <_PropertySheetDisplayName>BoostX64SettingsPropertySheet</_PropertySheetDisplayName>

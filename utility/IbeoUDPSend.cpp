@@ -91,12 +91,12 @@ bool IbeoUDPSend::SendStructData(const IbeoECUObjList objlist)
 	//需要根据不同的结构体名称进行修改！
 	if (sendto(m_socket,
 		(char *) &objlist,
-		sizeof(IbeoECUObj) * 3 + sizeof(int) + sizeof(uint32_t),
+		//sizeof(IbeoECUObjList),
+		sizeof(IbeoECUObj) * _MAX_OBJ_NUM_ + sizeof(uint8_t) + sizeof(uint32_t),
 		0,
 		(struct sockaddr FAR *) &m_sockDesAddress,
 		sizeof(m_sockDesAddress)) == SOCKET_ERROR)
 	{
-		//报错
 		cout << "sendto failed! Error: " << WSAGetLastError() << endl;
 
 		closesocket(m_socket);
@@ -130,7 +130,7 @@ bool IbeoUDPSend::SendStructData(const IbeoECUObj obj)
 	}
 	else
 	{
-		cout << "UDP: Ibeo ECU object sent" << endl;
+		//cout << "UDP: Ibeo ECU object sent" << endl;
 		return true;
 	}
 }
@@ -150,16 +150,4 @@ void IbeoUDPSend::InitSockAddress(const string strIPAddress, const string strPor
 	m_sockDesAddress.sin_port = htons(atol(strPort.c_str()));
 	//地址
 	m_sockDesAddress.sin_addr.s_addr = INADDR_BROADCAST;
-
-
-	//if (bind(m_socket,
-	//	(struct sockaddr FAR *) &m_sockLocalAddress,
-	//	sizeof(m_sockLocalAddress)) == SOCKET_ERROR)
-	//{
-	//	//报错
-	//	cout << "Binding socket failed! Error: " << WSAGetLastError() << endl;
-	//	closesocket(m_socket);
-	//	return;
-	//}
-
 }

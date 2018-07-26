@@ -13,32 +13,32 @@
 typedef struct {
 	//int cnt; //order number of current object in object list
 	uint16_t objID;
-	uint16_t flag;  /*	Flags_TrackedByStationaryModel  = 0x0040, ///< is object tracked using stationary model
-						Flags_Mobile                    = 0x0080, ///< Has been detected/validated as mobile. (the current tracking model is irrelevant; this flag just means it has been moving at some time)
-						Flags_Validated                 = 0x0100  ///< Object (stationary or dynamic) has been validated, i.e. valid enough to send out to the interface */
+	//uint16_t flag;  /*	Flags_TrackedByStationaryModel  = 0x0040, ///< is object tracked using stationary model
+					//	Flags_Mobile                    = 0x0080, ///< Has been detected/validated as mobile. (the current tracking model is irrelevant; this flag just means it has been moving at some time)
+					//	Flags_Validated                 = 0x0100  ///< Object (stationary or dynamic) has been validated, i.e. valid enough to send out to the interface */
 	bool trackedByStationaryModel;
 	bool mobile;
 	bool motionModelValidated;
-	uint32_t objAge;
-	uint32_t timestamp; // avaiable: Frac, Milli, Micro seconds
-	uint16_t objPredAge;
-	int classification;
-	uint8_t classCertainty;
-	uint32_t classAge;
+	//uint32_t objAge;
+	//uint32_t timestamp; // avaiable: Frac, Milli, Micro seconds
+	//uint16_t objPredAge;
+	uint8_t classification;
+	//uint8_t classCertainty;
+	//uint32_t classAge;
 	float centerX;
 	float centerY; //Sigma not available yet
 	float length; //Box.X
 	float width; //Box.Y
 	float orientation; //rad
-	float orientationSigma;
-	float relVelX;
-	float relVelY;
-	float relVelSigmaX;
-	float relVelSigmaY;
+	//float orientationSigma;
+	//float relVelX;
+	//float relVelY;
+	//float relVelSigmaX;
+	//float relVelSigmaY;
 	float absVelX;
 	float absVelY;
-	float absVelSigmaX;
-	float absVelSigmaY;
+	//float absVelSigmaX;
+	//float absVelSigmaY;
 	/*Other avaiable fields:
 	nbOfContourPoints;
 	IdxOfclosestPoint;
@@ -60,7 +60,7 @@ typedef struct {
 
 typedef struct {
 	uint32_t scanStartTimestamp; // avaiable: Frac, Milli, Micro seconds
-	int nbOfObjects;
+	uint8_t nbOfObjects;
 
 	IbeoECUObj IbeoECUObjs[_MAX_OBJ_NUM_];
 

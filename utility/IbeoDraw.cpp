@@ -9,7 +9,7 @@
 
 std::queue<IbeoECUObjList> objListQ;
 
-Scalar myColor(int& c)
+Scalar myColor(uint8_t& c)
 {
 	if ((c == 5)
 		|| (c == 6)) { //car & truck
@@ -43,7 +43,7 @@ void addObj2Frame(Mat& img, IbeoECUObj& o) {
 	//float pt2x = cx + o.length / (float)2.00000;
 	//float pt1y = cy - o.width / (float)2.00000;
 	//float pt2y = cy + o.width / (float)2.00000;
-	float arrowx = cx + o.length / (float)2.00000 + sqrtf(o.relVelX * o.relVelX + o.relVelY * o.relVelY);
+	float arrowx = cx + o.length / (float)2.00000 + sqrtf(o.absVelX * o.absVelX + o.absVelY * o.absVelY);
 	float arrowy = cy;
 	float L = o.length;
 	float W = o.width;
@@ -99,7 +99,7 @@ void addObj2Frame(Mat& img, IbeoECUObj& o) {
 	//std::cerr << std::endl;
 
 	RotatedRect rRect(
-		Point2f((float)w / 2.00000 - cy, (float)w - cx),
+		Point2f((float)w / 2.000 - cy, (float)w - cx),
 		Point2f(W, L),
 		-o.orientation * 180.00000 / 3.1415926
 	);
@@ -152,6 +152,7 @@ void setBackground(Mat& img) {
 	addLine(img, Point(w / 2, w), -fullFOV / 2, 800, Scalar(128, 138, 125), 1);
 }
 
+//NOT USED
 void drawFrame(Mat& fov) {
 	Mat frame = fov.clone(); //cloning takes too much memory space when iteration # gets high?
 	IbeoECUObjList ol = objListQ.front();
@@ -172,7 +173,10 @@ void drawFrame(Mat& fov) {
 }
 
 void doSubThread() {
-	// initialize subthread sleep time 
+	//work mode
+	bool doDraw = TRUE;
+
+	//initialize subthread sleep time 
 	uint subThreadSleep = 5;
 
 	//set FOV background
@@ -188,10 +192,11 @@ void doSubThread() {
 		if (!objListQ.empty()) {
 			IbeoECUObjList ol = objListQ.front();
 
-			// draw frame
-			//Mat frame = fov.clone(); //cloning takes too much memory space when iteration # gets high?
-			
 
+			// draw frame
+			Mat frame = fov.clone(); //cloning takes too much memory space when iteration # gets high?
+
+		
 			for (int i = 0; i < ol.nbOfObjects; i++) {
 			//	if ((ol.IbeoECUObjs[i].classification == 3) //ped
 			//		|| (ol.IbeoECUObjs[i].classification == 4) //bicycle
@@ -199,46 +204,53 @@ void doSubThread() {
 			//		|| (ol.IbeoECUObjs[i].classification == 6) //truck
 			//		|| (ol.IbeoECUObjs[i].classification == 15) //mbike
 			//		) {
-			//		addObj2Frame(frame, ol.IbeoECUObjs[i]);
-			//	}
+
 
 				//draw all objects
-				//addObj2Frame(frame, ol.IbeoECUObjs[i]);
+				if (doDraw)
+				{
+					addObj2Frame(frame, ol.IbeoECUObjs[i]);
+
+				}
 
 
-				//UDP
-				 
+
+				//sendList.SendStringData("test"); // send string
 				//sendList.SendStructData(ol.IbeoECUObjs[i]); //send obj
-				//std::cerr << ol.IbeoECUObjs[i].cnt << std::endl;
-				
-				//Sleep(1);
-			
+				//std::cout << ol.IbeoECUObjs[i].cnt << std::endl;
+
+
 			}
 			//show frame
-			//imshow("ECU IDC File Replay", frame);
-			//waitKey(1);
+			if (doDraw) {
+				imshow("ECU IDC File Replay", frame);
+				waitKey(20);
+			}
+
 
 
 
 			//do UDP sending
-			//sendList.SendStringData("test"); // send string
 			sendList.SendStructData(ol); //send object list
+			std::cout << "UDP: Sent # objects: " << (int)ol.nbOfObjects << std::endl;
 
 
 
 			objListQ.pop();
-			std::cerr << "Pop Q;  current Q size = " << objListQ.size() << std::endl;
+			//std::cout << "Pop Q;  current Q size = " << objListQ.size() << std::endl;
 		}
 		else {
-			std::cerr << "Q empty" << std::endl;
+			std::cout << "Q empty" << std::endl;
 		}
 
-		if ((objListQ.size() > 2) && (subThreadSleep > 0)) {
-			subThreadSleep--;
-		}
-		else if (objListQ.empty()) {
-			subThreadSleep++;
-		}
+		//if ((objListQ.size() > 2) && (subThreadSleep > 0)) {
+		//	subThreadSleep--;
+		//}
+		//else if (objListQ.empty()) {
+		//	subThreadSleep++;
+		//}
+		//std::cout << "Current sleep time = " << subThreadSleep << std::endl;
 		Sleep(subThreadSleep);
+
 	}
 }
