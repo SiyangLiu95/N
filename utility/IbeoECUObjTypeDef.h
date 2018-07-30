@@ -10,15 +10,17 @@
 #ifndef _IBEO_ECU_OBJ_TYPE_DEF_
 #define _IBEO_ECU_OBJ_TYPE_DEF_
 
+#define _MAX_CONTOUR_PTS_NUM_ 127 //internally, max possible number is 255
+
 typedef struct {
 	//int cnt; //order number of current object in object list
 	uint16_t objID;
 	//uint16_t flag;  /*	Flags_TrackedByStationaryModel  = 0x0040, ///< is object tracked using stationary model
 					//	Flags_Mobile                    = 0x0080, ///< Has been detected/validated as mobile. (the current tracking model is irrelevant; this flag just means it has been moving at some time)
 					//	Flags_Validated                 = 0x0100  ///< Object (stationary or dynamic) has been validated, i.e. valid enough to send out to the interface */
-	bool trackedByStationaryModel;
-	bool mobile;
-	bool motionModelValidated;
+	bool trackedByStationaryModel; //static or dynamic
+	bool mobile; //if dynamic, moving or not
+	bool motionModelValidated; // if object is validated 
 	//uint32_t objAge;
 	//uint32_t timestamp; // avaiable: Frac, Milli, Micro seconds
 	//uint16_t objPredAge;
@@ -39,6 +41,11 @@ typedef struct {
 	float absVelY;
 	//float absVelSigmaX;
 	//float absVelSigmaY;
+	uint8_t nbOfContourPoints;
+	uint8_t idxOfClosestPoint;
+
+	float contourPtsX[_MAX_CONTOUR_PTS_NUM_];
+	float contourPtsY[_MAX_CONTOUR_PTS_NUM_];
 	/*Other avaiable fields:
 	nbOfContourPoints;
 	IdxOfclosestPoint;
@@ -49,7 +56,7 @@ typedef struct {
 	ObjExtMeasurement;
 	List of Contour Points;
 	*/
-}IbeoECUObj;
+} IbeoECUObj;
 
 #endif
 

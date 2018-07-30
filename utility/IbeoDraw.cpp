@@ -99,9 +99,9 @@ void addObj2Frame(Mat& img, IbeoECUObj& o) {
 	//std::cerr << std::endl;
 
 	RotatedRect rRect(
-		Point2f((float)w / 2.000 - cy, (float)w - cx),
+		Point2f((float)w / (float)2.000 - cy, (float)w - cx),
 		Point2f(W, L),
-		-o.orientation * 180.00000 / 3.1415926
+		-o.orientation * (float)180.000 / (float)3.1415926
 	);
 	Point2f vertices[4]; 
 	rRect.points(vertices);
@@ -122,6 +122,34 @@ void addObj2Frame(Mat& img, IbeoECUObj& o) {
 		1, LINE_8, 0,
 		0.1//tip length
 	);
+}
+
+
+void addContourPts2Frame(Mat& img, IbeoECUObj& o) {
+	float pt1x = o.contourPtsX[0];
+	float pt1y = o.contourPtsY[0];
+	float pt2x;
+	float pt2y;
+
+	//convert ibeo coordinate to opencv mat val
+	//900 pixels represents 150m irl.
+	pt1x *= w / unit / 3;
+	pt1y *= w / unit / 3;
+
+	for (int i = 1; i < o.nbOfContourPoints; i++) {
+		pt2x = o.contourPtsX[i] * w / unit / 3;
+		pt2y = o.contourPtsY[i] * w / unit / 3;
+
+		line(img, 
+			Point(w / 2 - (int)pt1y, w - (int)pt1x), //box center location
+			Point(w / 2 - (int)pt2y, w - (int)pt2x),
+			myColor(o.classification), 
+			1, LINE_8, 0);
+
+		pt1x = pt2x;
+		pt1y = pt2y;
+	}
+
 }
 
 void addLine(Mat& img, Point start, float angle, int length, Scalar color, int thickness)//angle in rad, left +, right -, center forward 0
@@ -152,32 +180,13 @@ void setBackground(Mat& img) {
 	addLine(img, Point(w / 2, w), -fullFOV / 2, 800, Scalar(128, 138, 125), 1);
 }
 
-//NOT USED
-void drawFrame(Mat& fov) {
-	Mat frame = fov.clone(); //cloning takes too much memory space when iteration # gets high?
-	IbeoECUObjList ol = objListQ.front();
-
-	for (int i = 0; i < ol.nbOfObjects; i++) {
-		//if ((ol.IbeoECUObjs[i].classification == 3) //ped
-		//	|| (ol.IbeoECUObjs[i].classification == 4) //bicycle
-		//	|| (ol.IbeoECUObjs[i].classification == 5) //car
-		//	|| (ol.IbeoECUObjs[i].classification == 6) //truck
-		//	|| (ol.IbeoECUObjs[i].classification == 15) //mbike
-		//	) {
-		//	addObj2Frame(frame, ol.IbeoECUObjs[i]);
-		//}
-		addObj2Frame(frame, ol.IbeoECUObjs[i]);
-	}
-	imshow("ECU IDC File Replay", frame);
-	waitKey(1);
-}
-
 void doSubThread() {
 	//work mode
 	bool doDraw = TRUE;
+	bool doSend = TRUE;
 
-	//initialize subthread sleep time 
-	uint subThreadSleep = 5;
+	//initialize subthread sleep time (ms)
+	uint subThreadSleep = 2;
 
 	//set FOV background
 	Mat fov = Mat::zeros(w + 20, w, CV_8UC3); // leave space at bottom
@@ -198,42 +207,35 @@ void doSubThread() {
 
 		
 			for (int i = 0; i < ol.nbOfObjects; i++) {
-			//	if ((ol.IbeoECUObjs[i].classification == 3) //ped
-			//		|| (ol.IbeoECUObjs[i].classification == 4) //bicycle
-			//		|| (ol.IbeoECUObjs[i].classification == 5) //car
-			//		|| (ol.IbeoECUObjs[i].classification == 6) //truck
-			//		|| (ol.IbeoECUObjs[i].classification == 15) //mbike
-			//		) {
-
-
 				//draw all objects
 				if (doDraw)
 				{
-					addObj2Frame(frame, ol.IbeoECUObjs[i]);
+					if (!ol.IbeoECUObjs[i].trackedByStationaryModel) { //Dynamic Objects
+						addObj2Frame(frame, ol.IbeoECUObjs[i]);
+					}
+					else { //Static objects
+						addContourPts2Frame(frame, ol.IbeoECUObjs[i]);
+					}
 
 				}
 
-
-
-				//sendList.SendStringData("test"); // send string
-				//sendList.SendStructData(ol.IbeoECUObjs[i]); //send obj
-				//std::cout << ol.IbeoECUObjs[i].cnt << std::endl;
-
-
 			}
+
+
 			//show frame
 			if (doDraw) {
 				imshow("ECU IDC File Replay", frame);
-				waitKey(20);
+				moveWindow("ECU IDC File Replay", w, 0);
+				waitKey(1);
 			}
 
 
-
-
 			//do UDP sending
-			sendList.SendStructData(ol); //send object list
-			std::cout << "UDP: Sent # objects: " << (int)ol.nbOfObjects << std::endl;
-
+			if (doSend) {
+				if (sendList.SendStructData(ol)) { //send object list successful
+					std::cout << "UDP: Sent # objects: " << (int)ol.nbOfObjects << std::endl;
+				} 
+			}
 
 
 			objListQ.pop();
@@ -250,6 +252,7 @@ void doSubThread() {
 		//	subThreadSleep++;
 		//}
 		//std::cout << "Current sleep time = " << subThreadSleep << std::endl;
+		std::cout << "Current Q size = " << objListQ.size() << std::endl;
 		Sleep(subThreadSleep);
 
 	}

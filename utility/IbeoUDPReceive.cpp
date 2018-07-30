@@ -108,7 +108,7 @@ bool IbeoUDPReceive::ReceiveStringData(string& strMessage)
 	}
 }
 
-bool IbeoUDPReceive::ReceiveStructData(IbeoECUObjList* objlist) // NOT WORKING
+bool IbeoUDPReceive::ReceiveStructData(IbeoECUObjList* objlist)
 {
 	//需要根据不同的结构体名称进行修改！
 	m_sockReceiveAddress.sin_family = AF_INET;
@@ -121,7 +121,7 @@ bool IbeoUDPReceive::ReceiveStructData(IbeoECUObjList* objlist) // NOT WORKING
 		//接收数据的缓冲区
 		(char *)objlist,
 		//缓冲区长度
-		sizeof(IbeoECUObj) * _MAX_OBJ_NUM_ + sizeof(int) + sizeof(uint32_t),
+		10208 + sizeof(float)*64*2,
 		//接收数据的方式
 		0,
 		(struct sockaddr FAR *)&m_sockReceiveAddress,

@@ -67,9 +67,7 @@ bool IbeoUDPSend::SendStringData(const string strMessage)
 		(struct sockaddr FAR *) &m_sockDesAddress,
 		sizeof(m_sockDesAddress)) == SOCKET_ERROR)
 	{
-		//报错
-
-		cout << "sendto failed! Error: %d" << WSAGetLastError() << endl;
+		cout << "Send string failed! Error: %d" << WSAGetLastError() << endl;
 
 		closesocket(m_socket);
 
@@ -87,17 +85,16 @@ bool IbeoUDPSend::SendStringData(const string strMessage)
 
 bool IbeoUDPSend::SendStructData(const IbeoECUObjList objlist)
 {
-
-	//需要根据不同的结构体名称进行修改！
+	//cout << "Size of object list: " << sizeof(IbeoECUObjList) << endl; 
 	if (sendto(m_socket,
 		(char *) &objlist,
 		//sizeof(IbeoECUObjList),
-		sizeof(IbeoECUObj) * _MAX_OBJ_NUM_ + sizeof(uint8_t) + sizeof(uint32_t),
+		10208 + sizeof(float)*64*2,
 		0,
 		(struct sockaddr FAR *) &m_sockDesAddress,
 		sizeof(m_sockDesAddress)) == SOCKET_ERROR)
 	{
-		cout << "sendto failed! Error: " << WSAGetLastError() << endl;
+		cout << "Send Object List failed! Error: " << WSAGetLastError() << endl;
 
 		closesocket(m_socket);
 
@@ -112,8 +109,6 @@ bool IbeoUDPSend::SendStructData(const IbeoECUObjList objlist)
 
 bool IbeoUDPSend::SendStructData(const IbeoECUObj obj)
 {
-
-	//需要根据不同的结构体名称进行修改！
 	if (sendto(m_socket,
 		(char *)&obj,
 		sizeof(obj),
@@ -121,8 +116,7 @@ bool IbeoUDPSend::SendStructData(const IbeoECUObj obj)
 		(struct sockaddr FAR *) &m_sockDesAddress,
 		sizeof(m_sockDesAddress)) == SOCKET_ERROR)
 	{
-		//报错
-		cout << "sendto failed! Error: " << WSAGetLastError() << endl;
+		cout << "Send Object failed! Error: " << WSAGetLastError() << endl;
 
 		closesocket(m_socket);
 

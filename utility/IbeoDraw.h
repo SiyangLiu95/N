@@ -21,8 +21,8 @@ using namespace cv;
 #ifndef _IBEO_DRAW_
 #define _IBEO_DRAW_
 
-#define w 900 //define opencv window size
-#define unit 50 //define length(m) of each step irl
+#define w 900 //define opencv visualization window size
+#define unit 50 //define length(in meters) of each square in opencv window
 
 extern std::queue<IbeoECUObjList> objListQ; //Queue objLists in main thread, pop in drawing thread
 
@@ -32,11 +32,11 @@ void myRotate(float& x, float& y, float angle);
 
 void addObj2Frame(Mat& img, IbeoECUObj& o);
 
+void addContourPts2Frame(Mat& img, IbeoECUObj& o);
+
 void addLine(Mat& img, Point start, float angle, int length, Scalar color, int thickness);
 
 void setBackground(Mat& img);
-
-void drawFrame(Mat& fov); //unused
 
 void doSubThread(); //draw frame + send obj list through UDP
 
