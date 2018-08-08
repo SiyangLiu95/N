@@ -13,7 +13,6 @@ IbeoUDPSend::IbeoUDPSend(void)
 
 	WSAData ws;
 
-	//每个Winsock程序必须使用WSAStartup载入合适的Winsock动态链接库，如果载入失败，WSAStartup将返回SOCKET_ERROR，这个错误就是WSANOTINITIALISED
 	if (WSAStartup(MAKEWORD(1, 1), &ws) != 0)
 	{
 		cout << "WSAStartup failed! Error: " << WSAGetLastError() << endl;
@@ -28,11 +27,8 @@ IbeoUDPSend::~IbeoUDPSend(void)
 
 bool IbeoUDPSend::InitSocket(const string strIPAddress, const string strPort)
 {
-
-	//创建套接字,ipv4,报文，udp协议
 	m_socket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
 
-	//创建socket失败
 	if (INVALID_SOCKET == m_socket)
 	{
 		cout << "failed to create socket" << endl;
@@ -40,7 +36,6 @@ bool IbeoUDPSend::InitSocket(const string strIPAddress, const string strPort)
 		return false;
 	}
 
-	//初始化sock地址
 	InitSockAddress(strIPAddress, strPort);
 
 	bool bOpt = true;
@@ -131,17 +126,12 @@ bool IbeoUDPSend::SendStructData(const IbeoECUObj obj)
 
 void IbeoUDPSend::InitSockAddress(const string strIPAddress, const string strPort)
 {
-	//本地sock地址设置
-	m_sockLocalAddress.sin_family = AF_INET;     //ipv4地址类型
+	m_sockLocalAddress.sin_family = AF_INET;
 	m_sockLocalAddress.sin_addr.S_un.S_addr = htonl(INADDR_ANY);
 	m_sockLocalAddress.sin_port = htons(0);
-	memset(m_sockLocalAddress.sin_zero, 0, 8);
+	//memset(m_sockLocalAddress.sin_zero, 0, 8);
 
-	//目的sock地址设置
-	//IPv4版本
 	m_sockDesAddress.sin_family = AF_INET;
-	//端口
 	m_sockDesAddress.sin_port = htons(atol(strPort.c_str()));
-	//地址
 	m_sockDesAddress.sin_addr.s_addr = INADDR_BROADCAST;
 }

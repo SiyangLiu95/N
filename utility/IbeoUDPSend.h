@@ -30,10 +30,8 @@ public:
 
 	void CleanSocket();
 
-	//发送字符串数据
 	bool SendStringData(const string strMessage);
 
-	//发送指定结构体数据
 	bool SendStructData(const IbeoECUObj obj);
 	bool SendStructData(const IbeoECUObjList objlist);
 

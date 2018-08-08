@@ -183,7 +183,7 @@ void setBackground(Mat& img) {
 void doSubThread() {
 	//work mode
 	bool doDraw = TRUE;
-	bool doSend = TRUE;
+	bool doSend = FALSE;
 
 	//initialize subthread sleep time (ms)
 	uint subThreadSleep = 2;
